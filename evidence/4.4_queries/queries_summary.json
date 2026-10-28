@@ -1,0 +1,271 @@
+{
+  "generated_at": "2026-10-27T20:56:54+00:00",
+  "spark_version": "4.0.1",
+  "topic": "flights.events",
+  "query_config": {
+    "state": {
+      "question": "Top 10 de estados por retraso promedio de salida, con al menos 100 vuelos",
+      "output_mode": "complete",
+      "checkpoint": "/content/tarea2_bigdata/checkpoints/4.4_queries/state",
+      "output": "/content/tarea2_bigdata/outputs/4.4_queries/state_top10",
+      "threshold": 100
+    },
+    "hubs": {
+      "question": "Top 3 de aerolíneas por puntualidad en ATL, DFW y ORD, con al menos 20 vuelos",
+      "output_mode": "complete",
+      "checkpoint": "/content/tarea2_bigdata/checkpoints/4.4_queries/hubs",
+      "output": "/content/tarea2_bigdata/outputs/4.4_queries/hub_top3",
+      "threshold": 20
+    },
+    "window": {
+      "question": "Ventanas de 6 horas cada 1 hora para actividad y cancelación por aeropuerto",
+      "output_mode": "append",
+      "checkpoint": "/content/tarea2_bigdata/checkpoints/4.4_queries/window",
+      "output": "/content/tarea2_bigdata/outputs/4.4_queries/window_metrics",
+      "watermark": "3 hours"
+    },
+    "watermark_test": {
+      "checkpoint": "/content/tarea2_bigdata/checkpoints/4.4_queries/watermark_test",
+      "starting_offsets": "latest",
+      "watermark": "3 hours"
+    }
+  },
+  "records": {
+    "state": [
+      {
+        "batch_id": 0,
+        "total_flights": 10005,
+        "rows": 10,
+        "top": [
+          {
+            "origin_state": "South Carolina",
+            "flights": 104,
+            "avg_dep_delay": 22.846,
+            "stddev_dep_delay": 181.66,
+            "max_dep_delay": 1802.0,
+            "rank": 1,
+            "batch_id": 0
+          },
+          {
+            "origin_state": "Virginia",
+            "flights": 340,
+            "avg_dep_delay": 8.029,
+            "stddev_dep_delay": 51.057,
+            "max_dep_delay": 563.0,
+            "rank": 2,
+            "batch_id": 0
+          },
+          {
+            "origin_state": "Oregon",
+            "flights": 132,
+            "avg_dep_delay": 7.091,
+            "stddev_dep_delay": 68.805,
+            "max_dep_delay": 743.0,
+            "rank": 3,
+            "batch_id": 0
+          },
+          {
+            "origin_state": "Tennessee",
+            "flights": 221,
+            "avg_dep_delay": 6.064,
+            "stddev_dep_delay": 61.528,
+            "max_dep_delay": 755.0,
+            "rank": 4,
+            "batch_id": 0
+          },
+          {
+            "origin_state": "Maryland",
+            "flights": 124,
+            "avg_dep_delay": 5.669,
+            "stddev_dep_delay": 15.085,
+            "max_dep_delay": 97.0,
+            "rank": 5,
+            "batch_id": 0
+          },
+          {
+            "origin_state": "Florida",
+            "flights": 753,
+            "avg_dep_delay": 5.416,
+            "stddev_dep_delay": 38.945,
+            "max_dep_delay": 637.0,
+            "rank": 6,
+            "batch_id": 0
+          },
+          {
+            "origin_state": "Texas",
+            "flights": 962,
+            "avg_dep_delay": 5.2,
+            "stddev_dep_delay": 53.248,
+            "max_dep_delay": 1263.0,
+            "rank": 7,
+            "batch_id": 0
+          },
+          {
+            "origin_state": "New York",
+            "flights": 508,
+            "avg_dep_delay": 5.059,
+            "stddev_dep_delay": 42.782,
+            "max_dep_delay": 510.0,
+            "rank": 8,
+            "batch_id": 0
+          },
+          {
+            "origin_state": "Washington",
+            "flights": 323,
+            "avg_dep_delay": 4.619,
+            "stddev_dep_delay": 36.63,
+            "max_dep_delay": 440.0,
+            "rank": 9,
+            "batch_id": 0
+          },
+          {
+            "origin_state": "Kentucky",
+            "flights": 121,
+            "avg_dep_delay": 4.339,
+            "stddev_dep_delay": 45.412,
+            "max_dep_delay": 443.0,
+            "rank": 10,
+            "batch_id": 0
+          }
+        ]
+      }
+    ],
+    "hubs": [
+      {
+        "batch_id": 0,
+        "rows": 9,
+        "top": [
+          {
+            "origin": "ATL",
+            "op_unique_carrier": "9E",
+            "flights": 23,
+            "avg_arr_delay": -7.696,
+            "stddev_arr_delay": 25.383,
+            "position": 1,
+            "batch_id": 0
+          },
+          {
+            "origin": "ATL",
+            "op_unique_carrier": "WN",
+            "flights": 43,
+            "avg_arr_delay": -6.837,
+            "stddev_arr_delay": 10.135,
+            "position": 2,
+            "batch_id": 0
+          },
+          {
+            "origin": "ATL",
+            "op_unique_carrier": "DL",
+            "flights": 248,
+            "avg_arr_delay": -5.548,
+            "stddev_arr_delay": 18.389,
+            "position": 3,
+            "batch_id": 0
+          },
+          {
+            "origin": "DFW",
+            "op_unique_carrier": "OO",
+            "flights": 30,
+            "avg_arr_delay": -22.367,
+            "stddev_arr_delay": 11.094,
+            "position": 1,
+            "batch_id": 0
+          },
+          {
+            "origin": "DFW",
+            "op_unique_carrier": "MQ",
+            "flights": 87,
+            "avg_arr_delay": -4.437,
+            "stddev_arr_delay": 27.068,
+            "position": 2,
+            "batch_id": 0
+          },
+          {
+            "origin": "DFW",
+            "op_unique_carrier": "AA",
+            "flights": 189,
+            "avg_arr_delay": 1.339,
+            "stddev_arr_delay": 42.628,
+            "position": 3,
+            "batch_id": 0
+          },
+          {
+            "origin": "ORD",
+            "op_unique_carrier": "AA",
+            "flights": 68,
+            "avg_arr_delay": -5.303,
+            "stddev_arr_delay": 19.024,
+            "position": 1,
+            "batch_id": 0
+          },
+          {
+            "origin": "ORD",
+            "op_unique_carrier": "MQ",
+            "flights": 33,
+            "avg_arr_delay": -5.03,
+            "stddev_arr_delay": 20.08,
+            "position": 2,
+            "batch_id": 0
+          },
+          {
+            "origin": "ORD",
+            "op_unique_carrier": "UA",
+            "flights": 152,
+            "avg_arr_delay": -4.768,
+            "stddev_arr_delay": 27.069,
+            "position": 3,
+            "batch_id": 0
+          }
+        ]
+      }
+    ],
+    "window": [
+      {
+        "batch_id": 1,
+        "rows": 1553,
+        "sum_flights_overlapping_windows": 18791,
+        "min_window_start": "2024-08-31T19:00:00.000Z",
+        "max_window_end": "2024-09-01T11:00:00.000Z",
+        "airports": 289
+      }
+    ],
+    "watermark": []
+  },
+  "progress": {
+    "state": {
+      "batches": 3,
+      "input_rows": 10005,
+      "last_batch_id": 1,
+      "status": {
+        "message": "Waiting for next trigger",
+        "isDataAvailable": false,
+        "isTriggerActive": false
+      }
+    },
+    "hubs": {
+      "batches": 2,
+      "input_rows": 10005,
+      "last_batch_id": 1,
+      "status": {
+        "message": "Waiting for next trigger",
+        "isDataAvailable": false,
+        "isTriggerActive": false
+      }
+    },
+    "window": {
+      "batches": 2,
+      "input_rows": 10005,
+      "last_batch_id": 1,
+      "status": {
+        "message": "Waiting for next trigger",
+        "isDataAvailable": false,
+        "isTriggerActive": false
+      }
+    }
+  },
+  "exceptions": {
+    "state": null,
+    "hubs": null,
+    "window": null
+  }
+}

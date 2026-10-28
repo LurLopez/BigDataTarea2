@@ -1,0 +1,255 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1900" height="1420" viewBox="0 0 1900 1420" role="img" aria-labelledby="title desc">
+  <title id="title">Arquitectura Tarea 2: Kafka y Spark Structured Streaming</title>
+  <desc id="desc">Diagrama de arquitectura: laboratorio local con un nodo KRaft, propuesta escalable con tres brokers y tres controllers, contrato del evento, offsets, checkpoints, consultas y trazabilidad de la evidencia.</desc>
+  <defs>
+    <linearGradient id="page" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7faff"/>
+      <stop offset="1" stop-color="#eef3fa"/>
+    </linearGradient>
+    <linearGradient id="navy" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#17365d"/>
+      <stop offset="1" stop-color="#245181"/>
+    </linearGradient>
+    <filter id="shadow" x="-15%" y="-15%" width="130%" height="140%">
+      <feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#18344f" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M1,1 L11,6 L1,11 Z" fill="#49729b"/>
+    </marker>
+    <marker id="arrowDashed" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M1,1 L11,6 L1,11 Z" fill="#8b6fb1"/>
+    </marker>
+    <style>
+      text { font-family: Inter, "Segoe UI", Arial, sans-serif; fill: #18324b; }
+      .title { font-size: 34px; font-weight: 750; letter-spacing: -0.5px; }
+      .subtitle { font-size: 17px; fill: #62778d; }
+      .section { font-size: 23px; font-weight: 720; fill: #18324b; }
+      .sectionTag { font-size: 13px; font-weight: 700; letter-spacing: 1.2px; }
+      .boxTitle { font-size: 18px; font-weight: 700; }
+      .body { font-size: 14px; fill: #52687d; }
+      .small { font-size: 12px; fill: #61768a; }
+      .tiny { font-size: 10px; fill: #61768a; }
+      .white { fill: #fff; }
+      .whiteMuted { fill: #dbe8f4; }
+      .arrowLine { fill: none; stroke: #49729b; stroke-width: 3; marker-end: url(#arrow); }
+      .controlLine { fill: none; stroke: #8b6fb1; stroke-width: 2.2; stroke-dasharray: 7 7; marker-end: url(#arrowDashed); }
+      .card { filter: url(#shadow); }
+    </style>
+  </defs>
+
+  <rect width="1900" height="1420" fill="url(#page)"/>
+  <text x="55" y="63" class="title">Tarea 2 · Kafka + Spark Structured Streaming</text>
+  <text x="57" y="95" class="subtitle">US Flight Data 2024 · continuidad Tarea 1 → Tarea 2 · laboratorio implementado y diseño escalable</text>
+  <rect x="1622" y="46" width="220" height="38" rx="19" fill="#e2ecf6"/>
+  <text x="1732" y="71" text-anchor="middle" class="sectionTag" fill="#315a7e">BIG DATA · PUCV · 2026</text>
+
+  <!-- Local implementation -->
+  <rect x="40" y="130" width="1820" height="455" rx="24" fill="#fff" stroke="#d8e2ed" stroke-width="1.5"/>
+  <rect x="64" y="151" width="156" height="27" rx="13.5" fill="#e6f3ed"/>
+  <text x="142" y="169" text-anchor="middle" class="sectionTag" fill="#287454">IMPLEMENTADO</text>
+  <text x="235" y="173" class="section">Laboratorio local · KRaft en un único nodo</text>
+  <text x="1778" y="171" text-anchor="end" class="small">1 broker/controller · RF 1 · 3 particiones</text>
+
+  <!-- Local data source -->
+  <rect x="70" y="239" width="250" height="170" rx="17" fill="#f5f8fc" stroke="#c8d7e5" stroke-width="1.5" class="card"/>
+  <rect x="70" y="239" width="250" height="48" rx="17" fill="#dfeaf4"/>
+  <path d="M70 270h250v17H70z" fill="#dfeaf4"/>
+  <circle cx="98" cy="263" r="11" fill="#47769e"/>
+  <path d="M93 263h10M98 258v10" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+  <text x="119" y="269" class="boxTitle">Fuente Tarea 1</text>
+  <text x="92" y="319" class="body">US Flight Data 2024</text>
+  <text x="92" y="344" class="small">fact_flights Parquet · septiembre</text>
+  <text x="92" y="367" class="small">dim_airports: 348 aeropuertos</text>
+  <text x="92" y="390" class="small">582.622 filas disponibles para el replay</text>
+
+  <!-- Local producer -->
+  <rect x="365" y="239" width="310" height="170" rx="17" fill="#fff8ee" stroke="#efd0a2" stroke-width="1.5" class="card"/>
+  <rect x="365" y="239" width="310" height="48" rx="17" fill="#f7e5ca"/>
+  <path d="M365 270h310v17H365z" fill="#f7e5ca"/>
+  <circle cx="394" cy="263" r="11" fill="#c7832c"/>
+  <path d="M391 257l8 6-8 6z" fill="#fff"/>
+  <text x="415" y="269" class="boxTitle">Producer Python</text>
+  <text x="387" y="319" class="body">PyArrow + confluent-kafka</text>
+  <text x="387" y="344" class="small">key: flight_id estable</text>
+  <text x="387" y="367" class="small">JSON schema=1 · event_time · headers</text>
+  <text x="387" y="390" class="small">acks=all · idempotencia · replay 10.000</text>
+
+  <!-- Local Kafka node -->
+  <rect x="720" y="205" width="510" height="270" rx="19" fill="#f0f5fb" stroke="#91abc3" stroke-width="1.7" class="card"/>
+  <rect x="720" y="205" width="510" height="54" rx="19" fill="url(#navy)"/>
+  <path d="M720 240h510v19H720z" fill="#245181"/>
+  <text x="747" y="239" class="boxTitle white">Kafka 4.x · nodo local KRaft</text>
+  <text x="1204" y="238" text-anchor="end" class="small whiteMuted">node.id=1</text>
+  <rect x="750" y="277" width="205" height="53" rx="11" fill="#fff" stroke="#c7d7e6"/>
+  <text x="852" y="299" text-anchor="middle" class="small" font-weight="700">Controller KRaft</text>
+  <text x="852" y="317" text-anchor="middle" class="tiny">metadatos · quorum local</text>
+  <rect x="975" y="277" width="225" height="53" rx="11" fill="#fff" stroke="#c7d7e6"/>
+  <text x="1087" y="299" text-anchor="middle" class="small" font-weight="700">Broker</text>
+  <text x="1087" y="317" text-anchor="middle" class="tiny">recibe · persiste · sirve logs</text>
+  <text x="750" y="359" class="small" font-weight="700">Topic: flights.events · 3 particiones · RF 1 · 7 días</text>
+  <rect x="750" y="373" width="136" height="63" rx="10" fill="#fff" stroke="#8fb1d0" stroke-width="1.5"/>
+  <rect x="897" y="373" width="136" height="63" rx="10" fill="#fff" stroke="#8fb1d0" stroke-width="1.5"/>
+  <rect x="1044" y="373" width="156" height="63" rx="10" fill="#fff" stroke="#8fb1d0" stroke-width="1.5"/>
+  <text x="818" y="399" text-anchor="middle" class="small" font-weight="700">P0</text>
+  <text x="818" y="419" text-anchor="middle" class="tiny">key hash</text>
+  <text x="965" y="399" text-anchor="middle" class="small" font-weight="700">P1</text>
+  <text x="965" y="419" text-anchor="middle" class="tiny">key hash</text>
+  <text x="1122" y="399" text-anchor="middle" class="small" font-weight="700">P2</text>
+  <text x="1122" y="419" text-anchor="middle" class="tiny">key hash</text>
+
+  <!-- Local Spark -->
+  <rect x="1280" y="239" width="300" height="170" rx="17" fill="#f4f1fa" stroke="#c9b9dc" stroke-width="1.5" class="card"/>
+  <rect x="1280" y="239" width="300" height="48" rx="17" fill="#e7def1"/>
+  <path d="M1280 270h300v17h-300z" fill="#e7def1"/>
+  <circle cx="1309" cy="263" r="11" fill="#80649f"/>
+  <path d="M1303 263h12M1309 257v12" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+  <text x="1330" y="269" class="boxTitle">Spark Structured Streaming</text>
+  <text x="1302" y="319" class="body">Spark 4.0.1 · local[2] · event-time</text>
+  <text x="1302" y="344" class="small">Q1 estados · Q2 hubs</text>
+  <text x="1302" y="367" class="small">Q3 ventana 6 h / slide 1 h</text>
+  <text x="1302" y="390" class="small">watermark 3 h · estado + checkpoint</text>
+
+  <!-- Local output -->
+  <rect x="1630" y="239" width="200" height="170" rx="17" fill="#edf7f5" stroke="#b3d9d1" stroke-width="1.5" class="card"/>
+  <rect x="1630" y="239" width="200" height="48" rx="17" fill="#d8eee8"/>
+  <path d="M1630 270h200v17h-200z" fill="#d8eee8"/>
+  <text x="1730" y="269" text-anchor="middle" class="boxTitle">Salida y evidencia</text>
+  <text x="1730" y="320" text-anchor="middle" class="body">Parquet por batch</text>
+  <text x="1730" y="344" text-anchor="middle" class="small">snapshots / ventanas</text>
+  <text x="1730" y="375" text-anchor="middle" class="small">JSONL de métricas</text>
+  <text x="1730" y="395" text-anchor="middle" class="tiny">4.2–4.5 · evidence/</text>
+
+  <rect x="1280" y="449" width="300" height="62" rx="12" fill="#fff" stroke="#a88dc4" stroke-width="1.5" stroke-dasharray="6 5"/>
+  <text x="1430" y="474" text-anchor="middle" class="small" font-weight="700">Checkpoint por ingesta, consulta y escenario</text>
+  <text x="1430" y="495" text-anchor="middle" class="tiny">offset Kafka + estado + watermark</text>
+
+  <!-- Local arrows -->
+  <path d="M320 324H357" class="arrowLine"/>
+  <path d="M675 324H710" class="arrowLine"/>
+  <path d="M1230 324H1270" class="arrowLine"/>
+  <path d="M1580 324H1620" class="arrowLine"/>
+  <path d="M1430 410v29" fill="none" stroke="#80649f" stroke-width="2" stroke-dasharray="6 6" marker-end="url(#arrowDashed)"/>
+  <text x="74" y="536" class="small">Decisión: un tópico semántico. `origin_state` viaja enriquecido porque `dim_airports` es estática; cancelación es un estado del vuelo.</text>
+  <text x="1776" y="536" text-anchor="end" class="tiny">Broker y controller combinados · no es HA</text>
+
+  <!-- Scalable architecture -->
+  <rect x="40" y="615" width="1820" height="500" rx="24" fill="#fff" stroke="#d8e2ed" stroke-width="1.5"/>
+  <rect x="64" y="638" width="188" height="27" rx="13.5" fill="#eee8f6"/>
+  <text x="158" y="656" text-anchor="middle" class="sectionTag" fill="#715492">PROPUESTA</text>
+  <text x="270" y="660" class="section">Arquitectura escalable hipotética · roles separados y tolerancia a fallos</text>
+  <text x="1780" y="658" text-anchor="end" class="small">3 controllers · 3 brokers · RF 3 · 12 particiones iniciales</text>
+
+  <!-- Scalable source/producer -->
+  <rect x="70" y="805" width="250" height="150" rx="17" fill="#f5f8fc" stroke="#c8d7e5" stroke-width="1.5" class="card"/>
+  <text x="195" y="840" text-anchor="middle" class="boxTitle">US Flight Data 2024</text>
+  <text x="195" y="870" text-anchor="middle" class="small">Parquet / BTS</text>
+  <text x="195" y="896" text-anchor="middle" class="small">replay controlado</text>
+  <text x="195" y="927" text-anchor="middle" class="tiny">entidad: un vuelo por evento</text>
+  <rect x="360" y="805" width="260" height="150" rx="17" fill="#fff8ee" stroke="#efd0a2" stroke-width="1.5" class="card"/>
+  <text x="490" y="840" text-anchor="middle" class="boxTitle">Productores</text>
+  <text x="490" y="870" text-anchor="middle" class="small">key = flight_id</text>
+  <text x="490" y="896" text-anchor="middle" class="small">JSON + event-time + headers</text>
+  <text x="490" y="927" text-anchor="middle" class="tiny">local: 1 · escalable: N por key · acks=all</text>
+
+  <!-- Controller quorum -->
+  <rect x="690" y="695" width="430" height="105" rx="16" fill="#f8f5fb" stroke="#c9b9dc" stroke-width="1.4"/>
+  <text x="905" y="721" text-anchor="middle" class="small" font-weight="700">Quorum de controllers KRaft · metadatos</text>
+  <rect x="715" y="739" width="112" height="43" rx="9" fill="#fff" stroke="#c9b9dc"/>
+  <rect x="849" y="739" width="112" height="43" rx="9" fill="#fff" stroke="#c9b9dc"/>
+  <rect x="983" y="739" width="112" height="43" rx="9" fill="#fff" stroke="#c9b9dc"/>
+  <text x="771" y="766" text-anchor="middle" class="small" font-weight="700">Controller 1</text>
+  <text x="905" y="766" text-anchor="middle" class="small" font-weight="700">Controller 2</text>
+  <text x="1039" y="766" text-anchor="middle" class="small" font-weight="700">Controller 3</text>
+
+  <!-- Broker cluster/topic -->
+  <rect x="690" y="825" width="430" height="230" rx="18" fill="#eef4fa" stroke="#91abc3" stroke-width="1.6" class="card"/>
+  <text x="905" y="854" text-anchor="middle" class="boxTitle">Kafka brokers · tópico flights.events</text>
+  <rect x="715" y="871" width="118" height="49" rx="9" fill="#fff" stroke="#9ab4cc"/>
+  <rect x="846" y="871" width="118" height="49" rx="9" fill="#fff" stroke="#9ab4cc"/>
+  <rect x="977" y="871" width="118" height="49" rx="9" fill="#fff" stroke="#9ab4cc"/>
+  <text x="774" y="901" text-anchor="middle" class="small" font-weight="700">Broker 1</text>
+  <text x="905" y="901" text-anchor="middle" class="small" font-weight="700">Broker 2</text>
+  <text x="1036" y="901" text-anchor="middle" class="small" font-weight="700">Broker 3</text>
+  <text x="715" y="945" class="tiny">12 particiones distribuidas · replicación 3 · min ISR 2</text>
+  <g fill="#fff" stroke="#88a6c3" stroke-width="1">
+    <rect x="715" y="960" width="27" height="39" rx="5"/><rect x="747" y="960" width="27" height="39" rx="5"/>
+    <rect x="779" y="960" width="27" height="39" rx="5"/><rect x="811" y="960" width="27" height="39" rx="5"/>
+    <rect x="843" y="960" width="27" height="39" rx="5"/><rect x="875" y="960" width="27" height="39" rx="5"/>
+    <rect x="907" y="960" width="27" height="39" rx="5"/><rect x="939" y="960" width="27" height="39" rx="5"/>
+    <rect x="971" y="960" width="27" height="39" rx="5"/><rect x="1003" y="960" width="27" height="39" rx="5"/>
+    <rect x="1035" y="960" width="27" height="39" rx="5"/><rect x="1067" y="960" width="27" height="39" rx="5"/>
+  </g>
+  <g class="tiny" text-anchor="middle">
+    <text x="728" y="985">P0</text><text x="760" y="985">P1</text><text x="792" y="985">P2</text><text x="824" y="985">P3</text>
+    <text x="856" y="985">P4</text><text x="888" y="985">P5</text><text x="920" y="985">P6</text><text x="952" y="985">P7</text>
+    <text x="984" y="985">P8</text><text x="1016" y="985">P9</text><text x="1048" y="985">P10</text><text x="1080" y="985">P11</text>
+  </g>
+  <text x="715" y="1030" class="tiny">Retención 7 días por defecto · ampliable por SLA · réplicas entre brokers/zonas</text>
+
+  <!-- Scalable Spark -->
+  <rect x="1190" y="805" width="300" height="150" rx="17" fill="#f4f1fa" stroke="#c9b9dc" stroke-width="1.5" class="card"/>
+  <text x="1340" y="840" text-anchor="middle" class="boxTitle">Spark cluster · 3 workers</text>
+  <text x="1340" y="870" text-anchor="middle" class="small">Structured Streaming · 4 cores/worker</text>
+  <text x="1340" y="896" text-anchor="middle" class="small">tareas por partición</text>
+  <text x="1340" y="927" text-anchor="middle" class="tiny">estado + checkpoints</text>
+
+  <!-- Scalable sink -->
+  <rect x="1560" y="805" width="260" height="150" rx="17" fill="#edf7f5" stroke="#b3d9d1" stroke-width="1.5" class="card"/>
+  <text x="1690" y="840" text-anchor="middle" class="boxTitle">Sink escalable</text>
+  <text x="1690" y="870" text-anchor="middle" class="small">Data lake / tabla</text>
+  <text x="1690" y="896" text-anchor="middle" class="small">idempotente + métricas</text>
+  <text x="1690" y="927" text-anchor="middle" class="tiny">retención / SLA propios</text>
+
+  <!-- Scalable arrows and controller links -->
+  <path d="M320 880H350" class="arrowLine"/>
+  <path d="M620 880H680" class="arrowLine"/>
+  <path d="M1120 880H1180" class="arrowLine"/>
+  <path d="M1490 880H1550" class="arrowLine"/>
+  <path d="M771 782V817" class="controlLine"/>
+  <path d="M905 782V817" class="controlLine"/>
+  <path d="M1039 782V817" class="controlLine"/>
+  <text x="70" y="1090" class="small">Escala propuesta, no desplegada: 3 controllers dedicados + 3 brokers; el número de particiones se valida con throughput y capacidad medidos.</text>
+  <text x="1780" y="1090" text-anchor="end" class="tiny">KRaft elimina ZooKeeper en Kafka 4.x</text>
+
+  <!-- Franja de trazabilidad -->
+  <rect x="40" y="1148" width="1820" height="236" rx="24" fill="#fff" stroke="#d8e2ed" stroke-width="1.5"/>
+  <text x="64" y="1180" class="section">Trazabilidad operativa: contrato, offsets y evidencia</text>
+  <text x="1780" y="1180" text-anchor="end" class="tiny">Las cifras concretas están en 4.2–4.5</text>
+
+  <rect x="64" y="1198" width="560" height="160" rx="14" fill="#f5f8fc" stroke="#c8d7e5"/>
+  <text x="84" y="1224" class="small" font-weight="700">Contrato mínimo del evento</text>
+  <text x="84" y="1249" class="tiny">key = fl_date | op_unique_carrier | op_carrier_fl_num | origin | crs_dep_time</text>
+  <text x="84" y="1273" class="tiny">value = flight_observed; schema_version=1; event_id = key</text>
+  <text x="84" y="1297" class="tiny">event_time = crs_dep_time, hora programada local</text>
+  <text x="84" y="1321" class="tiny">kafka_timestamp = LogAppendTime (retención, no event-time)</text>
+  <text x="84" y="1345" class="tiny">headers = source, schema_version, event_type</text>
+
+  <rect x="644" y="1198" width="610" height="160" rx="14" fill="#f8f5fb" stroke="#c9b9dc"/>
+  <text x="664" y="1224" class="small" font-weight="700">Recorrido del dato</text>
+  <g font-size="10" fill="#52687d" text-anchor="middle">
+    <rect x="668" y="1241" width="105" height="38" rx="7" fill="#fff" stroke="#b9c9d8"/>
+    <text x="720" y="1264">Parquet T1</text>
+    <rect x="792" y="1241" width="105" height="38" rx="7" fill="#fff" stroke="#b9c9d8"/>
+    <text x="844" y="1264">event_id/key</text>
+    <rect x="916" y="1241" width="105" height="38" rx="7" fill="#fff" stroke="#b9c9d8"/>
+    <text x="968" y="1264">Kafka P0–P2</text>
+    <rect x="1040" y="1241" width="105" height="38" rx="7" fill="#fff" stroke="#b9c9d8"/>
+    <text x="1092" y="1264">offset Spark</text>
+    <rect x="1164" y="1241" width="70" height="38" rx="7" fill="#fff" stroke="#b9c9d8"/>
+    <text x="1199" y="1264">Q1–Q3</text>
+  </g>
+  <g stroke="#49729b" stroke-width="1.4" fill="none" marker-end="url(#arrow)">
+    <path d="M773 1260H786"/><path d="M897 1260H910"/><path d="M1021 1260H1034"/><path d="M1145 1260H1158"/>
+  </g>
+  <text x="664" y="1305" class="tiny">Cada consulta mantiene su propio offset y estado; no se reparten mensajes entre consultas.</text>
+  <text x="664" y="1327" class="tiny">Kafka conserva el log; el checkpoint de Spark guarda la posición lógica y el estado.</text>
+  <text x="664" y="1349" class="tiny">Un reinicio con el mismo checkpoint continúa desde la posición guardada.</text>
+
+  <rect x="1280" y="1198" width="556" height="160" rx="14" fill="#edf7f5" stroke="#b3d9d1"/>
+  <text x="1300" y="1224" class="small" font-weight="700">Operación local observada</text>
+  <text x="1300" y="1249" class="tiny">4.2: 10.000 eventos entregados; 17/17 checks; evidence/4.2_producer</text>
+  <text x="1300" y="1273" class="tiny">4.3: 10.000 + 5 eventos; sin reprocesar; 15/15 checks</text>
+  <text x="1300" y="1297" class="tiny">4.4: 3 consultas; 1.553 ventanas; 19/19 checks</text>
+  <text x="1300" y="1321" class="tiny">4.5: 50/250/500; 9/9 checks; Productor limitado por entorno</text>
+  <text x="1300" y="1345" class="tiny">Salidas: Parquet, JSONL, capacity_plot.png y checks.json</text>
+</svg>

@@ -1,0 +1,137 @@
+[
+  {
+    "key": "2024-09-01|DL|953|SEA|35",
+    "value": {
+      "schema_version": 1,
+      "event_type": "flight_observed",
+      "event_id": "2024-09-01|DL|953|SEA|35",
+      "event_time": "2024-09-01 00:35:00",
+      "event_time_source": "scheduled_departure_local",
+      "fl_date": "2024-09-01",
+      "origin": "SEA",
+      "origin_state": "Washington",
+      "dest": "MSP",
+      "op_unique_carrier": "DL",
+      "op_carrier_fl_num": "953",
+      "dep_delay": 8.0,
+      "arr_delay": -4.0,
+      "cancelled": 0.0,
+      "diverted": 0.0,
+      "distance": 1399.0,
+      "event_sequence": 6,
+      "producer_run_id": "tarea2-42-20261027T190232Z-b6aff9",
+      "ingested_at": "2026-10-27T19:02:33+00:00",
+      "test_injected_late": false
+    },
+    "partition": 2,
+    "offset": 0,
+    "timestamp": [
+      2,
+      1793127753752
+    ],
+    "headers": [
+      [
+        "source",
+        "tarea1-us-flight-data-2024"
+      ],
+      [
+        "schema_version",
+        "1"
+      ],
+      [
+        "event_type",
+        "flight_observed"
+      ]
+    ]
+  },
+  {
+    "key": "2024-09-01|NK|2700|LAS|35",
+    "value": {
+      "schema_version": 1,
+      "event_type": "flight_observed",
+      "event_id": "2024-09-01|NK|2700|LAS|35",
+      "event_time": "2024-09-01 00:35:00",
+      "event_time_source": "scheduled_departure_local",
+      "fl_date": "2024-09-01",
+      "origin": "LAS",
+      "origin_state": "Nevada",
+      "dest": "DFW",
+      "op_unique_carrier": "NK",
+      "op_carrier_fl_num": "2700",
+      "dep_delay": -7.0,
+      "arr_delay": -13.0,
+      "cancelled": 0.0,
+      "diverted": 0.0,
+      "distance": 1055.0,
+      "event_sequence": 7,
+      "producer_run_id": "tarea2-42-20261027T190232Z-b6aff9",
+      "ingested_at": "2026-10-27T19:02:33+00:00",
+      "test_injected_late": false
+    },
+    "partition": 2,
+    "offset": 1,
+    "timestamp": [
+      2,
+      1793127753752
+    ],
+    "headers": [
+      [
+        "source",
+        "tarea1-us-flight-data-2024"
+      ],
+      [
+        "schema_version",
+        "1"
+      ],
+      [
+        "event_type",
+        "flight_observed"
+      ]
+    ]
+  },
+  {
+    "key": "2024-09-01|UA|512|SFO|35",
+    "value": {
+      "schema_version": 1,
+      "event_type": "flight_observed",
+      "event_id": "2024-09-01|UA|512|SFO|35",
+      "event_time": "2024-09-01 00:35:00",
+      "event_time_source": "scheduled_departure_local",
+      "fl_date": "2024-09-01",
+      "origin": "SFO",
+      "origin_state": "California",
+      "dest": "IAH",
+      "op_unique_carrier": "UA",
+      "op_carrier_fl_num": "512",
+      "dep_delay": -8.0,
+      "arr_delay": -17.0,
+      "cancelled": 0.0,
+      "diverted": 0.0,
+      "distance": 1635.0,
+      "event_sequence": 8,
+      "producer_run_id": "tarea2-42-20261027T190232Z-b6aff9",
+      "ingested_at": "2026-10-27T19:02:33+00:00",
+      "test_injected_late": false
+    },
+    "partition": 2,
+    "offset": 2,
+    "timestamp": [
+      2,
+      1793127753752
+    ],
+    "headers": [
+      [
+        "source",
+        "tarea1-us-flight-data-2024"
+      ],
+      [
+        "schema_version",
+        "1"
+      ],
+      [
+        "event_type",
+        "flight_observed"
+      ]
+    ]
+  }
+]

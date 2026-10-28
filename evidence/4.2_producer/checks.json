@@ -1,0 +1,19 @@
+{
+  "source_rows": true,
+  "source_sorted": true,
+  "source_hash": true,
+  "dim_rows": true,
+  "producer_status": true,
+  "attempted_10k": true,
+  "delivered_10k": true,
+  "failed_zero": true,
+  "pending_zero": true,
+  "strict_pacing": true,
+  "five_attempts": true,
+  "scheduled_event_time": true,
+  "topic_partitions": true,
+  "partition_total": true,
+  "retention_7d": true,
+  "log_append_time": true,
+  "samples_3": true
+}

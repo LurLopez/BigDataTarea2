@@ -1,0 +1,17 @@
+{
+  "pre_topic_10k": true,
+  "schema_event_time_timestamp": true,
+  "checkpoint_exists": true,
+  "first_run_terminated": true,
+  "restart_run_terminated": true,
+  "first_run_no_exception": true,
+  "restart_run_no_exception": true,
+  "first_run_10k": true,
+  "restart_run_5": true,
+  "no_reprocess": true,
+  "restart_end_matches_kafka": true,
+  "total_processed_10005": true,
+  "valid_10005": true,
+  "invalid_zero": true,
+  "kafka_total_10005": true
+}

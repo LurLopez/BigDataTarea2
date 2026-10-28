@@ -1,0 +1,6 @@
+{"window_start": "2029-12-31T21:00:00.000Z", "window_end": "2030-01-01T03:00:00.000Z", "late_label": "LATE_OK", "events": 1, "batch_id": 5}
+{"window_start": "2029-12-31T22:00:00.000Z", "window_end": "2030-01-01T04:00:00.000Z", "late_label": "LATE_OK", "events": 1, "batch_id": 5}
+{"window_start": "2029-12-31T23:00:00.000Z", "window_end": "2030-01-01T05:00:00.000Z", "late_label": "CLOCK", "events": 1, "batch_id": 5}
+{"window_start": "2029-12-31T23:00:00.000Z", "window_end": "2030-01-01T05:00:00.000Z", "late_label": "LATE_OK", "events": 1, "batch_id": 5}
+{"window_start": "2030-01-01T00:00:00.000Z", "window_end": "2030-01-01T06:00:00.000Z", "late_label": "CLOCK", "events": 1, "batch_id": 5}
+{"window_start": "2030-01-01T00:00:00.000Z", "window_end": "2030-01-01T06:00:00.000Z", "late_label": "LATE_OK", "events": 1, "batch_id": 5}

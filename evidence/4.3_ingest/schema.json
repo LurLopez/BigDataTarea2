@@ -1,0 +1,316 @@
+{
+  "payload": {
+    "type": "struct",
+    "fields": [
+      {
+        "name": "schema_version",
+        "type": "integer",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "event_type",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "event_id",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "event_time",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "event_time_source",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "fl_date",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "origin",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "origin_state",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "dest",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "op_unique_carrier",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "op_carrier_fl_num",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "dep_delay",
+        "type": "double",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "arr_delay",
+        "type": "double",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "cancelled",
+        "type": "double",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "diverted",
+        "type": "double",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "distance",
+        "type": "double",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "event_sequence",
+        "type": "long",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "producer_run_id",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "ingested_at",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "test_injected_late",
+        "type": "boolean",
+        "nullable": true,
+        "metadata": {}
+      }
+    ]
+  },
+  "stream": {
+    "type": "struct",
+    "fields": [
+      {
+        "name": "kafka_key",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "kafka_value",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "kafka_topic",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "kafka_partition",
+        "type": "integer",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "kafka_offset",
+        "type": "long",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "kafka_timestamp",
+        "type": "timestamp",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "kafka_timestamp_type",
+        "type": "integer",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "kafka_headers",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "schema_version",
+        "type": "integer",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "event_type",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "event_id",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "event_time",
+        "type": "timestamp",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "event_time_source",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "fl_date",
+        "type": "date",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "origin",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "origin_state",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "dest",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "op_unique_carrier",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "op_carrier_fl_num",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "dep_delay",
+        "type": "double",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "arr_delay",
+        "type": "double",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "cancelled",
+        "type": "double",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "diverted",
+        "type": "double",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "distance",
+        "type": "double",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "event_sequence",
+        "type": "long",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "producer_run_id",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "ingested_at",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "test_injected_late",
+        "type": "boolean",
+        "nullable": false,
+        "metadata": {}
+      },
+      {
+        "name": "validation_errors",
+        "type": {
+          "type": "array",
+          "elementType": "string",
+          "containsNull": true
+        },
+        "nullable": false,
+        "metadata": {}
+      },
+      {
+        "name": "is_valid",
+        "type": "boolean",
+        "nullable": false,
+        "metadata": {}
+      }
+    ]
+  }
+}

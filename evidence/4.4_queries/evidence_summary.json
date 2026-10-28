@@ -1,0 +1,182 @@
+{
+  "generated_at": "2026-10-27T20:57:47+00:00",
+  "repo_commit": "54d322cb8dc1aecb63644b8467d4467e20573e4f",
+  "spark_version": "4.0.1",
+  "java_version": "21.0.12.1",
+  "python": "3.13.18",
+  "topic": "flights.events",
+  "bootstrap_servers": "localhost:9092",
+  "topic_offsets_after_test": {
+    "0": 3324,
+    "1": 3409,
+    "2": 3276
+  },
+  "trigger": "5 seconds",
+  "thresholds": {
+    "state_min_flights": 100,
+    "hub_min_flights": 20,
+    "top_states": 10,
+    "top_hubs": 3
+  },
+  "window": {
+    "duration": "6 hours",
+    "slide": "1 hour",
+    "watermark": "3 hours",
+    "event_time": "event_time (crs_dep_time)"
+  },
+  "query_config": {
+    "state": {
+      "question": "Top 10 de estados por retraso promedio de salida, con al menos 100 vuelos",
+      "output_mode": "complete",
+      "checkpoint": "/content/tarea2_bigdata/checkpoints/4.4_queries/state",
+      "output": "/content/tarea2_bigdata/outputs/4.4_queries/state_top10",
+      "threshold": 100
+    },
+    "hubs": {
+      "question": "Top 3 de aerolíneas por puntualidad en ATL, DFW y ORD, con al menos 20 vuelos",
+      "output_mode": "complete",
+      "checkpoint": "/content/tarea2_bigdata/checkpoints/4.4_queries/hubs",
+      "output": "/content/tarea2_bigdata/outputs/4.4_queries/hub_top3",
+      "threshold": 20
+    },
+    "window": {
+      "question": "Ventanas de 6 horas cada 1 hora para actividad y cancelación por aeropuerto",
+      "output_mode": "append",
+      "checkpoint": "/content/tarea2_bigdata/checkpoints/4.4_queries/window",
+      "output": "/content/tarea2_bigdata/outputs/4.4_queries/window_metrics",
+      "watermark": "3 hours"
+    },
+    "watermark_test": {
+      "checkpoint": "/content/tarea2_bigdata/checkpoints/4.4_queries/watermark_test",
+      "starting_offsets": "latest",
+      "watermark": "3 hours"
+    }
+  },
+  "queries": {
+    "state": {
+      "rows": 10,
+      "total_flights": 10005,
+      "progress": {
+        "batches": 3,
+        "input_rows": 10005,
+        "last_batch_id": 1,
+        "status": {
+          "message": "Waiting for next trigger",
+          "isDataAvailable": false,
+          "isTriggerActive": false
+        }
+      },
+      "output": "/content/tarea2_bigdata/outputs/4.4_queries/state_top10"
+    },
+    "hubs": {
+      "rows": 9,
+      "hubs": [
+        "ATL",
+        "DFW",
+        "ORD"
+      ],
+      "progress": {
+        "batches": 2,
+        "input_rows": 10005,
+        "last_batch_id": 1,
+        "status": {
+          "message": "Waiting for next trigger",
+          "isDataAvailable": false,
+          "isTriggerActive": false
+        }
+      },
+      "output": "/content/tarea2_bigdata/outputs/4.4_queries/hub_top3"
+    },
+    "window": {
+      "rows": 1553,
+      "sum_flights_overlapping_windows": 18791,
+      "min_window_start": "2024-08-31T19:00:00.000Z",
+      "max_window_end": "2024-09-01T11:00:00.000Z",
+      "progress": {
+        "batches": 2,
+        "input_rows": 10005,
+        "last_batch_id": 1,
+        "status": {
+          "message": "Waiting for next trigger",
+          "isDataAvailable": false,
+          "isTriggerActive": false
+        }
+      },
+      "output": "/content/tarea2_bigdata/outputs/4.4_queries/window_metrics"
+    }
+  },
+  "watermark_test": {
+    "topic": "flights.events",
+    "checkpoint": "/content/tarea2_bigdata/checkpoints/4.4_queries/watermark_test",
+    "starting_offsets": "latest",
+    "watermark": "3 hours",
+    "window": "6 hours",
+    "slide": "1 hour",
+    "events": [
+      {
+        "key": "2030-01-01|ZZ|9000|ATL|400",
+        "event_time": "2030-01-01 04:00:00",
+        "run_id": "watermark-clock",
+        "test_injected_late": true
+      },
+      {
+        "key": "2030-01-01|ZZ|9001|ATL|200",
+        "event_time": "2030-01-01 02:00:00",
+        "run_id": "watermark-late-ok",
+        "test_injected_late": true
+      },
+      {
+        "key": "2030-01-01|ZZ|9002|ATL|900",
+        "event_time": "2030-01-01 09:00:00",
+        "run_id": "watermark-clock",
+        "test_injected_late": true
+      },
+      {
+        "key": "2030-01-01|ZZ|9003|ATL|330",
+        "event_time": "2030-01-01 03:30:00",
+        "run_id": "watermark-late-drop",
+        "test_injected_late": true
+      }
+    ],
+    "delivered": 4,
+    "failed": 0,
+    "output_rows": 6,
+    "labels": [
+      "CLOCK",
+      "LATE_OK"
+    ],
+    "late_ok_present": true,
+    "late_drop_present": false,
+    "progress": {
+      "batches": 7,
+      "input_rows": 4,
+      "status": {
+        "message": "Waiting for next trigger",
+        "isDataAvailable": false,
+        "isTriggerActive": false
+      },
+      "exception": null
+    }
+  },
+  "checks": {
+    "spark_session_active": true,
+    "valid_events_streaming": true,
+    "three_query_checkpoints": true,
+    "query1_top10": true,
+    "query1_threshold_100": true,
+    "query1_total_10005": true,
+    "query2_hubs_present": true,
+    "query2_top3": true,
+    "query2_threshold_20": true,
+    "query3_windows": true,
+    "query3_event_time": true,
+    "query3_window_range": true,
+    "watermark_checkpoint": true,
+    "watermark_late_ok_present": true,
+    "watermark_late_drop_absent": true,
+    "watermark_delivered_4": true,
+    "watermark_input_4": true,
+    "no_query_exception": true,
+    "topic_has_events": true
+  }
+}

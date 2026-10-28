@@ -1,0 +1,902 @@
+[
+  {
+    "window_start": "2024-08-31T19:00:00.000Z",
+    "window_end": "2024-09-01T01:00:00.000Z",
+    "origin": "ANC",
+    "flights": 2,
+    "avg_dep_delay": 35.0,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-08-31T19:00:00.000Z",
+    "window_end": "2024-09-01T01:00:00.000Z",
+    "origin": "BQN",
+    "flights": 1,
+    "avg_dep_delay": -10.0,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-08-31T19:00:00.000Z",
+    "window_end": "2024-09-01T01:00:00.000Z",
+    "origin": "DEN",
+    "flights": 2,
+    "avg_dep_delay": -2.0,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-08-31T19:00:00.000Z",
+    "window_end": "2024-09-01T01:00:00.000Z",
+    "origin": "FAI",
+    "flights": 1,
+    "avg_dep_delay": 4.0,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-08-31T19:00:00.000Z",
+    "window_end": "2024-09-01T01:00:00.000Z",
+    "origin": "LAS",
+    "flights": 5,
+    "avg_dep_delay": -1.4,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-08-31T19:00:00.000Z",
+    "window_end": "2024-09-01T01:00:00.000Z",
+    "origin": "LAX",
+    "flights": 4,
+    "avg_dep_delay": 132.5,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-08-31T19:00:00.000Z",
+    "window_end": "2024-09-01T01:00:00.000Z",
+    "origin": "ONT",
+    "flights": 1,
+    "avg_dep_delay": 37.0,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-08-31T19:00:00.000Z",
+    "window_end": "2024-09-01T01:00:00.000Z",
+    "origin": "PDX",
+    "flights": 2,
+    "avg_dep_delay": 367.0,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-08-31T19:00:00.000Z",
+    "window_end": "2024-09-01T01:00:00.000Z",
+    "origin": "PHX",
+    "flights": 2,
+    "avg_dep_delay": 5.0,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-08-31T19:00:00.000Z",
+    "window_end": "2024-09-01T01:00:00.000Z",
+    "origin": "SEA",
+    "flights": 1,
+    "avg_dep_delay": 8.0,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-08-31T19:00:00.000Z",
+    "window_end": "2024-09-01T01:00:00.000Z",
+    "origin": "SFO",
+    "flights": 1,
+    "avg_dep_delay": -8.0,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-08-31T19:00:00.000Z",
+    "window_end": "2024-09-01T01:00:00.000Z",
+    "origin": "SJU",
+    "flights": 1,
+    "avg_dep_delay": 12.0,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-08-31T20:00:00.000Z",
+    "window_end": "2024-09-01T02:00:00.000Z",
+    "origin": "ANC",
+    "flights": 6,
+    "avg_dep_delay": 10.167,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-08-31T20:00:00.000Z",
+    "window_end": "2024-09-01T02:00:00.000Z",
+    "origin": "BQN",
+    "flights": 1,
+    "avg_dep_delay": -10.0,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-08-31T20:00:00.000Z",
+    "window_end": "2024-09-01T02:00:00.000Z",
+    "origin": "DEN",
+    "flights": 2,
+    "avg_dep_delay": -2.0,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-08-31T20:00:00.000Z",
+    "window_end": "2024-09-01T02:00:00.000Z",
+    "origin": "FAI",
+    "flights": 2,
+    "avg_dep_delay": 3.5,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-08-31T20:00:00.000Z",
+    "window_end": "2024-09-01T02:00:00.000Z",
+    "origin": "LAS",
+    "flights": 7,
+    "avg_dep_delay": 1.714,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-08-31T20:00:00.000Z",
+    "window_end": "2024-09-01T02:00:00.000Z",
+    "origin": "LAX",
+    "flights": 5,
+    "avg_dep_delay": 103.8,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-08-31T20:00:00.000Z",
+    "window_end": "2024-09-01T02:00:00.000Z",
+    "origin": "ONT",
+    "flights": 1,
+    "avg_dep_delay": 37.0,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-08-31T20:00:00.000Z",
+    "window_end": "2024-09-01T02:00:00.000Z",
+    "origin": "PDX",
+    "flights": 2,
+    "avg_dep_delay": 367.0,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-08-31T20:00:00.000Z",
+    "window_end": "2024-09-01T02:00:00.000Z",
+    "origin": "PHX",
+    "flights": 2,
+    "avg_dep_delay": 5.0,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-08-31T20:00:00.000Z",
+    "window_end": "2024-09-01T02:00:00.000Z",
+    "origin": "SEA",
+    "flights": 1,
+    "avg_dep_delay": 8.0,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-08-31T20:00:00.000Z",
+    "window_end": "2024-09-01T02:00:00.000Z",
+    "origin": "SFO",
+    "flights": 1,
+    "avg_dep_delay": -8.0,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-08-31T20:00:00.000Z",
+    "window_end": "2024-09-01T02:00:00.000Z",
+    "origin": "SJU",
+    "flights": 2,
+    "avg_dep_delay": 31.0,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-08-31T21:00:00.000Z",
+    "window_end": "2024-09-01T03:00:00.000Z",
+    "origin": "ANC",
+    "flights": 7,
+    "avg_dep_delay": 7.143,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-08-31T21:00:00.000Z",
+    "window_end": "2024-09-01T03:00:00.000Z",
+    "origin": "BQN",
+    "flights": 1,
+    "avg_dep_delay": -10.0,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-08-31T21:00:00.000Z",
+    "window_end": "2024-09-01T03:00:00.000Z",
+    "origin": "DEN",
+    "flights": 2,
+    "avg_dep_delay": -2.0,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-08-31T21:00:00.000Z",
+    "window_end": "2024-09-01T03:00:00.000Z",
+    "origin": "FAI",
+    "flights": 3,
+    "avg_dep_delay": -3.333,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-08-31T21:00:00.000Z",
+    "window_end": "2024-09-01T03:00:00.000Z",
+    "origin": "LAS",
+    "flights": 7,
+    "avg_dep_delay": 1.714,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-08-31T21:00:00.000Z",
+    "window_end": "2024-09-01T03:00:00.000Z",
+    "origin": "LAX",
+    "flights": 5,
+    "avg_dep_delay": 103.8,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-08-31T21:00:00.000Z",
+    "window_end": "2024-09-01T03:00:00.000Z",
+    "origin": "ONT",
+    "flights": 1,
+    "avg_dep_delay": 37.0,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-08-31T21:00:00.000Z",
+    "window_end": "2024-09-01T03:00:00.000Z",
+    "origin": "PDX",
+    "flights": 2,
+    "avg_dep_delay": 367.0,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-08-31T21:00:00.000Z",
+    "window_end": "2024-09-01T03:00:00.000Z",
+    "origin": "PHX",
+    "flights": 2,
+    "avg_dep_delay": 5.0,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-08-31T21:00:00.000Z",
+    "window_end": "2024-09-01T03:00:00.000Z",
+    "origin": "SEA",
+    "flights": 1,
+    "avg_dep_delay": 8.0,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-08-31T21:00:00.000Z",
+    "window_end": "2024-09-01T03:00:00.000Z",
+    "origin": "SFO",
+    "flights": 1,
+    "avg_dep_delay": -8.0,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-08-31T21:00:00.000Z",
+    "window_end": "2024-09-01T03:00:00.000Z",
+    "origin": "SJU",
+    "flights": 3,
+    "avg_dep_delay": 19.0,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-08-31T22:00:00.000Z",
+    "window_end": "2024-09-01T04:00:00.000Z",
+    "origin": "ANC",
+    "flights": 7,
+    "avg_dep_delay": 7.143,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-08-31T22:00:00.000Z",
+    "window_end": "2024-09-01T04:00:00.000Z",
+    "origin": "BQN",
+    "flights": 1,
+    "avg_dep_delay": -10.0,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-08-31T22:00:00.000Z",
+    "window_end": "2024-09-01T04:00:00.000Z",
+    "origin": "DEN",
+    "flights": 2,
+    "avg_dep_delay": -2.0,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-08-31T22:00:00.000Z",
+    "window_end": "2024-09-01T04:00:00.000Z",
+    "origin": "FAI",
+    "flights": 3,
+    "avg_dep_delay": -3.333,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-08-31T22:00:00.000Z",
+    "window_end": "2024-09-01T04:00:00.000Z",
+    "origin": "LAS",
+    "flights": 7,
+    "avg_dep_delay": 1.714,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-08-31T22:00:00.000Z",
+    "window_end": "2024-09-01T04:00:00.000Z",
+    "origin": "LAX",
+    "flights": 5,
+    "avg_dep_delay": 103.8,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-08-31T22:00:00.000Z",
+    "window_end": "2024-09-01T04:00:00.000Z",
+    "origin": "ONT",
+    "flights": 1,
+    "avg_dep_delay": 37.0,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-08-31T22:00:00.000Z",
+    "window_end": "2024-09-01T04:00:00.000Z",
+    "origin": "PDX",
+    "flights": 2,
+    "avg_dep_delay": 367.0,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-08-31T22:00:00.000Z",
+    "window_end": "2024-09-01T04:00:00.000Z",
+    "origin": "PHX",
+    "flights": 2,
+    "avg_dep_delay": 5.0,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-08-31T22:00:00.000Z",
+    "window_end": "2024-09-01T04:00:00.000Z",
+    "origin": "PSE",
+    "flights": 1,
+    "avg_dep_delay": -1.0,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-08-31T22:00:00.000Z",
+    "window_end": "2024-09-01T04:00:00.000Z",
+    "origin": "SEA",
+    "flights": 1,
+    "avg_dep_delay": 8.0,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-08-31T22:00:00.000Z",
+    "window_end": "2024-09-01T04:00:00.000Z",
+    "origin": "SFO",
+    "flights": 1,
+    "avg_dep_delay": -8.0,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-08-31T22:00:00.000Z",
+    "window_end": "2024-09-01T04:00:00.000Z",
+    "origin": "SJU",
+    "flights": 4,
+    "avg_dep_delay": 13.0,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-08-31T23:00:00.000Z",
+    "window_end": "2024-09-01T05:00:00.000Z",
+    "origin": "ANC",
+    "flights": 7,
+    "avg_dep_delay": 7.143,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-08-31T23:00:00.000Z",
+    "window_end": "2024-09-01T05:00:00.000Z",
+    "origin": "BQN",
+    "flights": 1,
+    "avg_dep_delay": -10.0,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-08-31T23:00:00.000Z",
+    "window_end": "2024-09-01T05:00:00.000Z",
+    "origin": "DEN",
+    "flights": 2,
+    "avg_dep_delay": -2.0,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-08-31T23:00:00.000Z",
+    "window_end": "2024-09-01T05:00:00.000Z",
+    "origin": "FAI",
+    "flights": 3,
+    "avg_dep_delay": -3.333,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-08-31T23:00:00.000Z",
+    "window_end": "2024-09-01T05:00:00.000Z",
+    "origin": "LAS",
+    "flights": 7,
+    "avg_dep_delay": 1.714,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-08-31T23:00:00.000Z",
+    "window_end": "2024-09-01T05:00:00.000Z",
+    "origin": "LAX",
+    "flights": 5,
+    "avg_dep_delay": 103.8,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-08-31T23:00:00.000Z",
+    "window_end": "2024-09-01T05:00:00.000Z",
+    "origin": "ONT",
+    "flights": 1,
+    "avg_dep_delay": 37.0,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-08-31T23:00:00.000Z",
+    "window_end": "2024-09-01T05:00:00.000Z",
+    "origin": "PDX",
+    "flights": 2,
+    "avg_dep_delay": 367.0,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-08-31T23:00:00.000Z",
+    "window_end": "2024-09-01T05:00:00.000Z",
+    "origin": "PHX",
+    "flights": 2,
+    "avg_dep_delay": 5.0,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-08-31T23:00:00.000Z",
+    "window_end": "2024-09-01T05:00:00.000Z",
+    "origin": "PSE",
+    "flights": 1,
+    "avg_dep_delay": -1.0,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-08-31T23:00:00.000Z",
+    "window_end": "2024-09-01T05:00:00.000Z",
+    "origin": "SEA",
+    "flights": 1,
+    "avg_dep_delay": 8.0,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-08-31T23:00:00.000Z",
+    "window_end": "2024-09-01T05:00:00.000Z",
+    "origin": "SFO",
+    "flights": 1,
+    "avg_dep_delay": -8.0,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-08-31T23:00:00.000Z",
+    "window_end": "2024-09-01T05:00:00.000Z",
+    "origin": "SJU",
+    "flights": 4,
+    "avg_dep_delay": 13.0,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-09-01T00:00:00.000Z",
+    "window_end": "2024-09-01T06:00:00.000Z",
+    "origin": "ABQ",
+    "flights": 2,
+    "avg_dep_delay": -9.5,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-09-01T00:00:00.000Z",
+    "window_end": "2024-09-01T06:00:00.000Z",
+    "origin": "ACV",
+    "flights": 1,
+    "avg_dep_delay": -4.0,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-09-01T00:00:00.000Z",
+    "window_end": "2024-09-01T06:00:00.000Z",
+    "origin": "AEX",
+    "flights": 1,
+    "avg_dep_delay": -3.0,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-09-01T00:00:00.000Z",
+    "window_end": "2024-09-01T06:00:00.000Z",
+    "origin": "ALB",
+    "flights": 1,
+    "avg_dep_delay": -12.0,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-09-01T00:00:00.000Z",
+    "window_end": "2024-09-01T06:00:00.000Z",
+    "origin": "ALW",
+    "flights": 1,
+    "avg_dep_delay": -9.0,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-09-01T00:00:00.000Z",
+    "window_end": "2024-09-01T06:00:00.000Z",
+    "origin": "ANC",
+    "flights": 8,
+    "avg_dep_delay": 5.125,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-09-01T00:00:00.000Z",
+    "window_end": "2024-09-01T06:00:00.000Z",
+    "origin": "ATL",
+    "flights": 7,
+    "avg_dep_delay": -5.571,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-09-01T00:00:00.000Z",
+    "window_end": "2024-09-01T06:00:00.000Z",
+    "origin": "ATW",
+    "flights": 1,
+    "avg_dep_delay": -9.0,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-09-01T00:00:00.000Z",
+    "window_end": "2024-09-01T06:00:00.000Z",
+    "origin": "AUS",
+    "flights": 4,
+    "avg_dep_delay": -6.0,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-09-01T00:00:00.000Z",
+    "window_end": "2024-09-01T06:00:00.000Z",
+    "origin": "BDL",
+    "flights": 1,
+    "avg_dep_delay": -9.0,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-09-01T00:00:00.000Z",
+    "window_end": "2024-09-01T06:00:00.000Z",
+    "origin": "BGR",
+    "flights": 1,
+    "avg_dep_delay": -6.0,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-09-01T00:00:00.000Z",
+    "window_end": "2024-09-01T06:00:00.000Z",
+    "origin": "BHM",
+    "flights": 3,
+    "avg_dep_delay": -4.667,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-09-01T00:00:00.000Z",
+    "window_end": "2024-09-01T06:00:00.000Z",
+    "origin": "BIL",
+    "flights": 1,
+    "avg_dep_delay": -5.0,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-09-01T00:00:00.000Z",
+    "window_end": "2024-09-01T06:00:00.000Z",
+    "origin": "BIS",
+    "flights": 1,
+    "avg_dep_delay": -5.0,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-09-01T00:00:00.000Z",
+    "window_end": "2024-09-01T06:00:00.000Z",
+    "origin": "BLI",
+    "flights": 1,
+    "avg_dep_delay": -2.0,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-09-01T00:00:00.000Z",
+    "window_end": "2024-09-01T06:00:00.000Z",
+    "origin": "BNA",
+    "flights": 5,
+    "avg_dep_delay": -4.6,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-09-01T00:00:00.000Z",
+    "window_end": "2024-09-01T06:00:00.000Z",
+    "origin": "BOI",
+    "flights": 3,
+    "avg_dep_delay": -6.0,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-09-01T00:00:00.000Z",
+    "window_end": "2024-09-01T06:00:00.000Z",
+    "origin": "BOS",
+    "flights": 10,
+    "avg_dep_delay": -6.7,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-09-01T00:00:00.000Z",
+    "window_end": "2024-09-01T06:00:00.000Z",
+    "origin": "BPT",
+    "flights": 1,
+    "avg_dep_delay": -10.0,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-09-01T00:00:00.000Z",
+    "window_end": "2024-09-01T06:00:00.000Z",
+    "origin": "BQN",
+    "flights": 2,
+    "avg_dep_delay": 34.5,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-09-01T00:00:00.000Z",
+    "window_end": "2024-09-01T06:00:00.000Z",
+    "origin": "BRO",
+    "flights": 1,
+    "avg_dep_delay": -9.0,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-09-01T00:00:00.000Z",
+    "window_end": "2024-09-01T06:00:00.000Z",
+    "origin": "BTR",
+    "flights": 1,
+    "avg_dep_delay": 62.0,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-09-01T00:00:00.000Z",
+    "window_end": "2024-09-01T06:00:00.000Z",
+    "origin": "BTV",
+    "flights": 3,
+    "avg_dep_delay": -7.667,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-09-01T00:00:00.000Z",
+    "window_end": "2024-09-01T06:00:00.000Z",
+    "origin": "BUF",
+    "flights": 2,
+    "avg_dep_delay": -1.5,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-09-01T00:00:00.000Z",
+    "window_end": "2024-09-01T06:00:00.000Z",
+    "origin": "BZN",
+    "flights": 1,
+    "avg_dep_delay": -2.0,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-09-01T00:00:00.000Z",
+    "window_end": "2024-09-01T06:00:00.000Z",
+    "origin": "CHA",
+    "flights": 1,
+    "avg_dep_delay": 73.0,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-09-01T00:00:00.000Z",
+    "window_end": "2024-09-01T06:00:00.000Z",
+    "origin": "CHS",
+    "flights": 2,
+    "avg_dep_delay": -6.0,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-09-01T00:00:00.000Z",
+    "window_end": "2024-09-01T06:00:00.000Z",
+    "origin": "CID",
+    "flights": 3,
+    "avg_dep_delay": -2.333,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-09-01T00:00:00.000Z",
+    "window_end": "2024-09-01T06:00:00.000Z",
+    "origin": "CLE",
+    "flights": 1,
+    "avg_dep_delay": -7.0,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-09-01T00:00:00.000Z",
+    "window_end": "2024-09-01T06:00:00.000Z",
+    "origin": "CLT",
+    "flights": 3,
+    "avg_dep_delay": -3.0,
+    "cancel_rate_pct": 33.333,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-09-01T00:00:00.000Z",
+    "window_end": "2024-09-01T06:00:00.000Z",
+    "origin": "CMH",
+    "flights": 1,
+    "avg_dep_delay": -4.0,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-09-01T00:00:00.000Z",
+    "window_end": "2024-09-01T06:00:00.000Z",
+    "origin": "COS",
+    "flights": 1,
+    "avg_dep_delay": -12.0,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-09-01T00:00:00.000Z",
+    "window_end": "2024-09-01T06:00:00.000Z",
+    "origin": "CPR",
+    "flights": 2,
+    "avg_dep_delay": -10.5,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-09-01T00:00:00.000Z",
+    "window_end": "2024-09-01T06:00:00.000Z",
+    "origin": "CRP",
+    "flights": 1,
+    "avg_dep_delay": -8.0,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-09-01T00:00:00.000Z",
+    "window_end": "2024-09-01T06:00:00.000Z",
+    "origin": "CRW",
+    "flights": 1,
+    "avg_dep_delay": -7.0,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-09-01T00:00:00.000Z",
+    "window_end": "2024-09-01T06:00:00.000Z",
+    "origin": "CVG",
+    "flights": 1,
+    "avg_dep_delay": -14.0,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-09-01T00:00:00.000Z",
+    "window_end": "2024-09-01T06:00:00.000Z",
+    "origin": "DAY",
+    "flights": 1,
+    "avg_dep_delay": 32.0,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  },
+  {
+    "window_start": "2024-09-01T00:00:00.000Z",
+    "window_end": "2024-09-01T06:00:00.000Z",
+    "origin": "DCA",
+    "flights": 3,
+    "avg_dep_delay": 9.667,
+    "cancel_rate_pct": 0.0,
+    "batch_id": 1
+  }
+]

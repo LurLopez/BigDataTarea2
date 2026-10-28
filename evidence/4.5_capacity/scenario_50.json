@@ -1,0 +1,392 @@
+{
+  "rate": 50,
+  "start_row": 10005,
+  "target_events": 3000,
+  "duration_seconds": 60,
+  "cooldown_seconds": 30,
+  "run_id": "tarea2-45-50-96a923e3",
+  "checkpoint": "/content/tarea2_bigdata/checkpoints/4.5_capacity/50",
+  "output": "/content/tarea2_bigdata/outputs/4.5_capacity/window_50",
+  "producer": {
+    "rate": 50,
+    "start_row": 10005,
+    "target_events": 3000,
+    "delivered": 2867,
+    "attempted": 2867,
+    "failed": 0,
+    "pending": 0,
+    "exception": null,
+    "elapsed_seconds": 60.017,
+    "attempted_events_per_second": 47.77,
+    "delivered_events_per_second": 47.77,
+    "run_id": "tarea2-45-50-96a923e3",
+    "status": "ok"
+  },
+  "kafka_offsets_start": {
+    "0": 3324,
+    "1": 3409,
+    "2": 3276
+  },
+  "kafka_offsets_end": {
+    "0": 4279,
+    "1": 4346,
+    "2": 4251
+  },
+  "query": {
+    "batches": 15,
+    "input_rows": 2867,
+    "max_input_rows_per_second": 48.60972194438888,
+    "max_processed_rows_per_second": 222.117202268431,
+    "max_batch_duration_ms": 2784,
+    "max_lag": 378,
+    "final_lag": 0,
+    "sink_seconds_total": 1.8e-05,
+    "exception": null
+  },
+  "batches": [
+    {
+      "rate": 50,
+      "batch_id": 0,
+      "rows": 0,
+      "sink_seconds": 2e-06
+    },
+    {
+      "rate": 50,
+      "batch_id": 1,
+      "rows": 0,
+      "sink_seconds": 2e-06
+    },
+    {
+      "rate": 50,
+      "batch_id": 2,
+      "rows": 0,
+      "sink_seconds": 2e-06
+    },
+    {
+      "rate": 50,
+      "batch_id": 3,
+      "rows": 0,
+      "sink_seconds": 1e-06
+    },
+    {
+      "rate": 50,
+      "batch_id": 4,
+      "rows": 0,
+      "sink_seconds": 1e-06
+    },
+    {
+      "rate": 50,
+      "batch_id": 5,
+      "rows": 0,
+      "sink_seconds": 1e-06
+    },
+    {
+      "rate": 50,
+      "batch_id": 6,
+      "rows": 0,
+      "sink_seconds": 1e-06
+    },
+    {
+      "rate": 50,
+      "batch_id": 7,
+      "rows": 0,
+      "sink_seconds": 1e-06
+    },
+    {
+      "rate": 50,
+      "batch_id": 8,
+      "rows": 0,
+      "sink_seconds": 1e-06
+    },
+    {
+      "rate": 50,
+      "batch_id": 9,
+      "rows": 0,
+      "sink_seconds": 1e-06
+    },
+    {
+      "rate": 50,
+      "batch_id": 10,
+      "rows": 0,
+      "sink_seconds": 1e-06
+    },
+    {
+      "rate": 50,
+      "batch_id": 11,
+      "rows": 0,
+      "sink_seconds": 1e-06
+    },
+    {
+      "rate": 50,
+      "batch_id": 12,
+      "rows": 0,
+      "sink_seconds": 1e-06
+    },
+    {
+      "rate": 50,
+      "batch_id": 13,
+      "rows": 0,
+      "sink_seconds": 1e-06
+    },
+    {
+      "rate": 50,
+      "batch_id": 14,
+      "rows": 0,
+      "sink_seconds": 1e-06
+    }
+  ],
+  "samples": [
+    {
+      "scenario_rate": 50,
+      "elapsed_seconds": 0.495,
+      "delivered": 6,
+      "processed": 0,
+      "lag": 6,
+      "input_rows_per_second": 0.0,
+      "processed_rows_per_second": 0.0,
+      "batch_duration_ms": 1118,
+      "num_input_rows_last_batch": 0,
+      "driver_cpu_percent": 0.0,
+      "driver_rss_mb": 580.223,
+      "query_exception": null
+    },
+    {
+      "scenario_rate": 50,
+      "elapsed_seconds": 2.747,
+      "delivered": 116,
+      "processed": 0,
+      "lag": 116,
+      "input_rows_per_second": 0.0,
+      "processed_rows_per_second": 0.0,
+      "batch_duration_ms": 1118,
+      "num_input_rows_last_batch": 0,
+      "driver_cpu_percent": 0.0,
+      "driver_rss_mb": 580.223,
+      "query_exception": null
+    },
+    {
+      "scenario_rate": 50,
+      "elapsed_seconds": 6.112,
+      "delivered": 271,
+      "processed": 0,
+      "lag": 271,
+      "input_rows_per_second": 0.0,
+      "processed_rows_per_second": 0.0,
+      "batch_duration_ms": 1118,
+      "num_input_rows_last_batch": 0,
+      "driver_cpu_percent": 0.0,
+      "driver_rss_mb": 580.23,
+      "query_exception": null
+    },
+    {
+      "scenario_rate": 50,
+      "elapsed_seconds": 8.832,
+      "delivered": 402,
+      "processed": 144,
+      "lag": 258,
+      "input_rows_per_second": 28.8,
+      "processed_rows_per_second": 51.724137931034484,
+      "batch_duration_ms": 2784,
+      "num_input_rows_last_batch": 144,
+      "driver_cpu_percent": 0.0,
+      "driver_rss_mb": 580.23,
+      "query_exception": null
+    },
+    {
+      "scenario_rate": 50,
+      "elapsed_seconds": 11.643,
+      "delivered": 539,
+      "processed": 379,
+      "lag": 160,
+      "input_rows_per_second": 47.0,
+      "processed_rows_per_second": 222.117202268431,
+      "batch_duration_ms": 1058,
+      "num_input_rows_last_batch": 235,
+      "driver_cpu_percent": 0.0,
+      "driver_rss_mb": 580.23,
+      "query_exception": null
+    },
+    {
+      "scenario_rate": 50,
+      "elapsed_seconds": 15.0,
+      "delivered": 700,
+      "processed": 379,
+      "lag": 321,
+      "input_rows_per_second": 47.0,
+      "processed_rows_per_second": 222.117202268431,
+      "batch_duration_ms": 1058,
+      "num_input_rows_last_batch": 235,
+      "driver_cpu_percent": 0.0,
+      "driver_rss_mb": 580.23,
+      "query_exception": null
+    },
+    {
+      "scenario_rate": 50,
+      "elapsed_seconds": 18.178,
+      "delivered": 855,
+      "processed": 621,
+      "lag": 234,
+      "input_rows_per_second": 48.4,
+      "processed_rows_per_second": 187.3065015479876,
+      "batch_duration_ms": 1292,
+      "num_input_rows_last_batch": 242,
+      "driver_cpu_percent": 0.0,
+      "driver_rss_mb": 580.23,
+      "query_exception": null
+    },
+    {
+      "scenario_rate": 50,
+      "elapsed_seconds": 21.564,
+      "delivered": 1016,
+      "processed": 862,
+      "lag": 154,
+      "input_rows_per_second": 48.2,
+      "processed_rows_per_second": 159.92037159920372,
+      "batch_duration_ms": 1507,
+      "num_input_rows_last_batch": 241,
+      "driver_cpu_percent": 0.0,
+      "driver_rss_mb": 580.238,
+      "query_exception": null
+    },
+    {
+      "scenario_rate": 50,
+      "elapsed_seconds": 25.45,
+      "delivered": 1204,
+      "processed": 1102,
+      "lag": 102,
+      "input_rows_per_second": 48.2,
+      "processed_rows_per_second": 159.92037159920372,
+      "batch_duration_ms": 1507,
+      "num_input_rows_last_batch": 241,
+      "driver_cpu_percent": 0.0,
+      "driver_rss_mb": 580.238,
+      "query_exception": null
+    },
+    {
+      "scenario_rate": 50,
+      "elapsed_seconds": 30.265,
+      "delivered": 1436,
+      "processed": 1102,
+      "lag": 334,
+      "input_rows_per_second": 47.990401919616076,
+      "processed_rows_per_second": 207.07506471095772,
+      "batch_duration_ms": 1159,
+      "num_input_rows_last_batch": 240,
+      "driver_cpu_percent": 0.0,
+      "driver_rss_mb": 580.238,
+      "query_exception": null
+    },
+    {
+      "scenario_rate": 50,
+      "elapsed_seconds": 35.215,
+      "delivered": 1673,
+      "processed": 1345,
+      "lag": 328,
+      "input_rows_per_second": 48.60972194438888,
+      "processed_rows_per_second": 151.4018691588785,
+      "batch_duration_ms": 1605,
+      "num_input_rows_last_batch": 243,
+      "driver_cpu_percent": 0.0,
+      "driver_rss_mb": 580.238,
+      "query_exception": null
+    },
+    {
+      "scenario_rate": 50,
+      "elapsed_seconds": 40.168,
+      "delivered": 1913,
+      "processed": 1585,
+      "lag": 328,
+      "input_rows_per_second": 48.0,
+      "processed_rows_per_second": 144.57831325301206,
+      "batch_duration_ms": 1660,
+      "num_input_rows_last_batch": 240,
+      "driver_cpu_percent": 0.0,
+      "driver_rss_mb": 580.238,
+      "query_exception": null
+    },
+    {
+      "scenario_rate": 50,
+      "elapsed_seconds": 46.287,
+      "delivered": 2204,
+      "processed": 1826,
+      "lag": 378,
+      "input_rows_per_second": 48.2,
+      "processed_rows_per_second": 159.18097754293262,
+      "batch_duration_ms": 1514,
+      "num_input_rows_last_batch": 241,
+      "driver_cpu_percent": 0.0,
+      "driver_rss_mb": 580.242,
+      "query_exception": null
+    },
+    {
+      "scenario_rate": 50,
+      "elapsed_seconds": 52.608,
+      "delivered": 2507,
+      "processed": 2304,
+      "lag": 203,
+      "input_rows_per_second": 48.4,
+      "processed_rows_per_second": 115.07370423204944,
+      "batch_duration_ms": 2103,
+      "num_input_rows_last_batch": 242,
+      "driver_cpu_percent": 0.0,
+      "driver_rss_mb": 580.242,
+      "query_exception": null
+    },
+    {
+      "scenario_rate": 50,
+      "elapsed_seconds": 58.144,
+      "delivered": 2775,
+      "processed": 2543,
+      "lag": 232,
+      "input_rows_per_second": 47.79044191161767,
+      "processed_rows_per_second": 213.58355674709563,
+      "batch_duration_ms": 1119,
+      "num_input_rows_last_batch": 239,
+      "driver_cpu_percent": 0.0,
+      "driver_rss_mb": 580.25,
+      "query_exception": null
+    },
+    {
+      "scenario_rate": 50,
+      "elapsed_seconds": 63.796,
+      "delivered": 2867,
+      "processed": 2784,
+      "lag": 83,
+      "input_rows_per_second": 48.2,
+      "processed_rows_per_second": 157.72251308900525,
+      "batch_duration_ms": 1528,
+      "num_input_rows_last_batch": 241,
+      "driver_cpu_percent": 0.0,
+      "driver_rss_mb": 474.625,
+      "query_exception": null
+    },
+    {
+      "scenario_rate": 50,
+      "elapsed_seconds": 72.786,
+      "delivered": 2867,
+      "processed": 2867,
+      "lag": 0,
+      "input_rows_per_second": 16.603320664132827,
+      "processed_rows_per_second": 38.87587822014052,
+      "batch_duration_ms": 2135,
+      "num_input_rows_last_batch": 83,
+      "driver_cpu_percent": 0.0,
+      "driver_rss_mb": 474.625,
+      "query_exception": null
+    },
+    {
+      "scenario_rate": 50,
+      "elapsed_seconds": 78.773,
+      "delivered": 2867,
+      "processed": 2867,
+      "lag": 0,
+      "input_rows_per_second": 0.0,
+      "processed_rows_per_second": 0.0,
+      "batch_duration_ms": 1636,
+      "num_input_rows_last_batch": 0,
+      "driver_cpu_percent": 0.0,
+      "driver_rss_mb": 474.625,
+      "query_exception": null
+    }
+  ]
+}

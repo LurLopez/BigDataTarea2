@@ -1,0 +1,14 @@
+{
+  "generated_at": "2026-10-27T19:03:05+00:00",
+  "repo_commit": "b2215226014617d0cec32cc49824f7ae8382f411",
+  "kafka_version": "4.0.0",
+  "python": "3.13.18",
+  "topic": "flights.events",
+  "partitions": 3,
+  "replication_factor": 1,
+  "retention_ms": 604800000,
+  "kafka_message_timestamp_type": "LogAppendTime",
+  "rate_events_per_second": 500,
+  "max_events": 10000,
+  "max_attempts": 5
+}

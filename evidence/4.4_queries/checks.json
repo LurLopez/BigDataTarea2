@@ -1,0 +1,21 @@
+{
+  "spark_session_active": true,
+  "valid_events_streaming": true,
+  "three_query_checkpoints": true,
+  "query1_top10": true,
+  "query1_threshold_100": true,
+  "query1_total_10005": true,
+  "query2_hubs_present": true,
+  "query2_top3": true,
+  "query2_threshold_20": true,
+  "query3_windows": true,
+  "query3_event_time": true,
+  "query3_window_range": true,
+  "watermark_checkpoint": true,
+  "watermark_late_ok_present": true,
+  "watermark_late_drop_absent": true,
+  "watermark_delivered_4": true,
+  "watermark_input_4": true,
+  "no_query_exception": true,
+  "topic_has_events": true
+}

@@ -1,0 +1,242 @@
+{
+  "generated_at": "2026-10-27T23:34:35+00:00",
+  "spark_version": "4.0.1",
+  "python_version": "3.13.18",
+  "topic": "flights.events",
+  "config": {
+    "initial_count": 200,
+    "backlog_count": 300,
+    "contrast_backlog": 50,
+    "contrast_new": 50,
+    "duplicate_count": 100,
+    "start_row": 58005,
+    "rate": 100,
+    "trigger": "5 seconds",
+    "checkpoint_main": "/content/tarea2_bigdata/checkpoints/4.6_recovery/main",
+    "checkpoint_contrast": "/content/tarea2_bigdata/checkpoints/4.6_recovery/contrast",
+    "checkpoint_duplicate": "/content/tarea2_bigdata/checkpoints/4.6_recovery/duplicate",
+    "starting_offsets": "latest"
+  },
+  "runs": {
+    "main_initial": {
+      "label": "main_initial",
+      "input_rows": 200,
+      "batches": 2,
+      "offsets": {
+        "start": "None",
+        "end": {
+          "0": 16560,
+          "1": 16228,
+          "2": 16135
+        }
+      },
+      "exception": null
+    },
+    "main_restart_no_backlog": {
+      "label": "main_restart_no_backlog",
+      "input_rows": 0,
+      "batches": 1,
+      "offsets": {
+        "start": {
+          "0": 16560,
+          "1": 16228,
+          "2": 16135
+        },
+        "end": {
+          "0": 16560,
+          "1": 16228,
+          "2": 16135
+        }
+      },
+      "exception": null
+    },
+    "main_backlog": {
+      "label": "main_backlog",
+      "input_rows": 300,
+      "batches": 1,
+      "offsets": {
+        "start": {
+          "0": 16560,
+          "1": 16228,
+          "2": 16135
+        },
+        "end": {
+          "0": 16666,
+          "1": 16323,
+          "2": 16234
+        }
+      },
+      "exception": null
+    },
+    "contrast_latest": {
+      "label": "contrast_latest",
+      "input_rows": 50,
+      "batches": 2,
+      "offsets": {
+        "start": "None",
+        "end": {
+          "0": 16696,
+          "1": 16358,
+          "2": 16269
+        }
+      },
+      "exception": null,
+      "input_before_new": 0
+    }
+  },
+  "states": [
+    {
+      "label": "main_initial",
+      "batch_id": 0,
+      "total_events": 0,
+      "states": 0
+    },
+    {
+      "label": "main_initial",
+      "batch_id": 1,
+      "total_events": 200,
+      "states": 40
+    },
+    {
+      "label": "main_backlog",
+      "batch_id": 2,
+      "total_events": 500,
+      "states": 46
+    },
+    {
+      "label": "contrast_latest",
+      "batch_id": 0,
+      "total_events": 0,
+      "states": 0
+    },
+    {
+      "label": "contrast_latest",
+      "batch_id": 1,
+      "total_events": 50,
+      "states": 22
+    }
+  ],
+  "producer_runs": [
+    {
+      "label": "inicial",
+      "run_id": "tarea2-46-inicial-0d22fd9f",
+      "target_count": 200,
+      "attempted": 200,
+      "delivered": 200,
+      "failed": 0,
+      "pending": 0,
+      "elapsed_seconds": 2.893,
+      "events_per_second": 69.123,
+      "start_row": 58005,
+      "end_row": 58204,
+      "count": 200
+    },
+    {
+      "label": "backlog",
+      "run_id": "tarea2-46-backlog-326098b5",
+      "target_count": 300,
+      "attempted": 300,
+      "delivered": 300,
+      "failed": 0,
+      "pending": 0,
+      "elapsed_seconds": 3.734,
+      "events_per_second": 80.347,
+      "start_row": 58205,
+      "end_row": 58504,
+      "count": 300
+    },
+    {
+      "label": "contrast_backlog",
+      "run_id": "tarea2-46-contrast_backlog-33af38b2",
+      "target_count": 50,
+      "attempted": 50,
+      "delivered": 50,
+      "failed": 0,
+      "pending": 0,
+      "elapsed_seconds": 1.083,
+      "events_per_second": 46.155,
+      "start_row": 58505,
+      "end_row": 58554,
+      "count": 50
+    },
+    {
+      "label": "contrast_new",
+      "run_id": "tarea2-46-contrast_new-adefd280",
+      "target_count": 50,
+      "attempted": 50,
+      "delivered": 50,
+      "failed": 0,
+      "pending": 0,
+      "elapsed_seconds": 1.12,
+      "events_per_second": 44.644,
+      "start_row": 58555,
+      "end_row": 58604,
+      "count": 50
+    },
+    {
+      "label": "duplicate_first",
+      "run_id": "tarea2-46-duplicate_first-3f72ee5e",
+      "target_count": 100,
+      "attempted": 100,
+      "delivered": 100,
+      "failed": 0,
+      "pending": 0,
+      "elapsed_seconds": 1.866,
+      "events_per_second": 53.6,
+      "start_row": 58605,
+      "end_row": 58704,
+      "count": 100
+    }
+  ],
+  "duplicate": {
+    "expected_events": 100,
+    "first_rows": 100,
+    "first_unique": 100,
+    "final_rows": 200,
+    "final_unique": 100,
+    "duplicate_ids_sample": [
+      "2024-09-04|AS|1072|CMH|701",
+      "2024-09-04|OH|5231|BTR|703",
+      "2024-09-04|YX|4427|STL|704",
+      "2024-09-04|9E|5210|MYR|705",
+      "2024-09-04|UA|2237|SFO|705",
+      "2024-09-04|AA|573|DEN|701",
+      "2024-09-04|AA|696|IND|703",
+      "2024-09-04|DL|2719|MSP|705",
+      "2024-09-04|DL|431|DEN|705",
+      "2024-09-04|NK|3052|FLL|705",
+      "2024-09-04|OO|4867|ABQ|705",
+      "2024-09-04|YX|3420|BGR|700",
+      "2024-09-04|YX|3422|SDF|700",
+      "2024-09-04|AA|2776|LEX|702",
+      "2024-09-04|YX|4350|LIT|704",
+      "2024-09-04|AA|2771|DEN|705",
+      "2024-09-04|NK|3350|MCO|705",
+      "2024-09-04|AA|2680|PNS|701",
+      "2024-09-04|UA|1001|LAX|701",
+      "2024-09-04|MQ|3656|LIT|704"
+    ],
+    "first_exception": "An exception was raised by the Python Proxy. Return Message: Traceback (most recent call last):\n  File \"/usr/local/lib/python3.13/dist-packages/py4j/clientserver.py\", line 644, in _call_proxy\n    return_value = getattr(self.pool[obj_id], method)(*params)\n  File \"/usr/local/lib/python3.13/dist-packages/pyspark/sql/utils.py\", line 165, in call\n    raise e\n  File \"/usr/local/lib/python3.13/dist-packages/pyspark/sql/utils.py\", line 162, in call\n    self.func(DataFrame(jdf, wrapped_session_jdf), batch_id)\n    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/ipykernel_1908/4236809216.py\", line 25, in duplicate_processor\n    raise RuntimeError(\"Fallo inducido: sink escrito, checkpoint no confirmado\")\nRuntimeError: Fallo inducido: sink escrito, checkpoint no confirmado\n\n=== Streaming Query ===\nIdentifier: 4.6_recovery_duplicate [id = a7f2e0b9-75e6-43b8-a903-5bb0f78b726c, runId = 67d57457-9158-4788-a45e-5718a04d19a8]\nCurrent Committed Offsets: {KafkaV2[Subscribe[flights.events]]: {\"flights.events\":{\"0\":16696,\"1\":16358,\"2\":16269}}}\nCurrent Available Offsets: {KafkaV2[Subscribe[flights.events]]: {\"flights.events\":{\"0\":16730,\"1\":16391,\"2\":16302}}}\n\nCurrent State: ACTIVE\nThread State: RUNNABLE\n\nLogical Plan:\n~WriteToMicroBatchDataSourceV1 ForeachBatchSink, a7f2e0b9-75e6-43b8-a903-5bb0f78b726c, [queryName=4.6_recovery_duplicate, checkpointLocation=/content/tarea2_bigdata/checkpoints/4.6_recovery/duplicate], Append\n+- ~Project [event_id#12016, event_time#12034, origin#12035, origin_state#12036, dep_delay#12038, kafka_offset#12012L]\n   +- ~Filter (((((((test_injected_late#12039 = false) AND (schema_version#12014 = 1)) AND (event_type#12015 = flight_observed)) AND isnotnull(event_time#12034)) AND isnotnull(origin#12035)) AND isnotnull(origin_state#12036)) AND cast(cancelled#12037 as double) IN (cast(0 as double),cast(1 as double)))\n      +- ~Project [kafka_key#12011, kafka_offset#12012L, schema_version#12014, event_type#12015, event_id#12016, event_time#12034, event_time_source#12018, fl_date#12019, origin#12035, origin_state#12036, dest#12022, op_unique_carrier#12023, op_carrier_fl_num#12024, dep_delay#12038, arr_delay#12026, cancelled#12037, diverted#12028, distance#12029, event_sequence#12030L, producer_run_id#12031, ingested_at#12032, coalesce(test_injected_late#12033, false) AS test_injected_late#12039]\n         +- ~Project [kafka_key#12011, kafka_offset#12012L, schema_version#12014, event_type#12015, event_id#12016, event_time#12034, event_time_source#12018, fl_date#12019, origin#12035, origin_state#12036, dest#12022, op_unique_carrier#12023, op_carrier_fl_num#12024, cast(dep_delay#12025 as double) AS dep_delay#12038, arr_delay#12026, cancelled#12037, diverted#12028, distance#12029, event_sequence#12030L, producer_run_id#12031, ingested_at#12032, test_injected_late#12033]\n            +- ~Project [kafka_key#12011, kafka_offset#12012L, schema_version#12014, event_type#12015, event_id#12016, event_time#12034, event_time_source#12018, fl_date#12019, origin#12035, origin_state#12036, dest#12022, op_unique_carrier#12023, op_carrier_fl_num#12024, dep_delay#12025, arr_delay#12026, cast(cancelled#12027 as double) AS cancelled#12037, diverted#12028, distance#12029, event_sequence#12030L, producer_run_id#12031, ingested_at#12032, test_injected_late#12033]\n               +- ~Project [kafka_key#12011, kafka_offset#12012L, schema_version#12014, event_type#12015, event_id#12016, event_time#12034, event_time_source#12018, fl_date#12019, origin#12035, trim(origin_state#12021, None) AS origin_state#12036, dest#12022, op_unique_carrier#12023, op_carrier_fl_num#12024, dep_delay#12025, arr_delay#12026, cancelled#12027, diverted#12028, distance#12029, event_sequence#12030L, producer_run_id#12031, ingested_at#12032, test_injected_late#12033]\n                  +- ~Project [kafka_key#12011, kafka_offset#12012L, schema_version#12014, event_type#12015, event_id#12016, event_time#12034, event_time_source#12018, fl_date#12019, upper(trim(origin#12020, None)) AS origin#12035, origin_state#12021, dest#12022, op_unique_carrier#12023, op_carrier_fl_num#12024, dep_delay#12025, arr_delay#12026, cancelled#12027, diverted#12028, distance#12029, event_sequence#12030L, producer_run_id#12031, ingested_at#12032, test_injected_late#12033]\n                     +- ~Project [kafka_key#12011, kafka_offset#12012L, schema_version#12014, event_type#12015, event_id#12016, to_timestamp(event_time#12017, Some(yyyy-MM-dd HH:mm:ss), TimestampType, Some(UTC), true) AS event_time#12034, event_time_source#12018, fl_date#12019, origin#12020, origin_state#12021, dest#12022, op_unique_carrier#12023, op_carrier_fl_num#12024, dep_delay#12025, arr_delay#12026, cancelled#12027, diverted#12028, distance#12029, event_sequence#12030L, producer_run_id#12031, ingested_at#12032, test_injected_late#12033]\n                        +- ~Project [kafka_key#12011, kafka_offset#12012L, payload#12013.schema_version AS schema_version#12014, payload#12013.event_type AS event_type#12015, payload#12013.event_id AS event_id#12016, payload#12013.event_time AS event_time#12017, payload#12013.event_time_source AS event_time_source#12018, payload#12013.fl_date AS fl_date#12019, payload#12013.origin AS origin#12020, payload#12013.origin_state AS origin_state#12021, payload#12013.dest AS dest#12022, payload#12013.op_unique_carrier AS op_unique_carrier#12023, payload#12013.op_carrier_fl_num AS op_carrier_fl_num#12024, payload#12013.dep_delay AS dep_delay#12025, payload#12013.arr_delay AS arr_delay#12026, payload#12013.cancelled AS cancelled#12027, payload#12013.diverted AS diverted#12028, payload#12013.distance AS distance#12029, payload#12013.event_sequence AS event_sequence#12030L, payload#12013.producer_run_id AS producer_run_id#12031, payload#12013.ingested_at AS ingested_at#12032, payload#12013.test_injected_late AS test_injected_late#12033]\n                           +- ~Project [cast(key#12004 as string) AS kafka_key#12011, offset#12008L AS kafka_offset#12012L, from_json(StructField(schema_version,IntegerType,true), StructField(event_type,StringType,true), StructField(event_id,StringType,true), StructField(event_time,StringType,true), StructField(event_time_source,StringType,true), StructField(fl_date,StringType,true), StructField(origin,StringType,true), StructField(origin_state,StringType,true), StructField(dest,StringType,true), StructField(op_unique_carrier,StringType,true), StructField(op_carrier_fl_num,StringType,true), StructField(dep_delay,DoubleType,true), StructField(arr_delay,DoubleType,true), StructField(cancelled,DoubleType,true), StructField(diverted,DoubleType,true), StructField(distance,DoubleType,true), StructField(event_sequence,LongType,true), StructField(producer_run_id,StringType,true), StructField(ingested_at,StringType,true), StructField(test_injected_late,BooleanType,true), cast(value#12005 as string), Some(UTC), false) AS payload#12013]\n                              +- ~StreamingDataSourceV2ScanRelation[key#12004, value#12005, topic#12006, partition#12007, offset#12008L, timestamp#12009, timestampType#12010] KafkaTable\n",
+    "checkpoint": "/content/tarea2_bigdata/checkpoints/4.6_recovery/duplicate",
+    "sink": "/content/tarea2_bigdata/outputs/4.6_recovery/duplicate/sink"
+  },
+  "checks": {
+    "initial_200": true,
+    "state_initial_200": true,
+    "restart_no_backlog_zero": true,
+    "backlog_300": true,
+    "state_after_backlog_500": true,
+    "no_reprocess": true,
+    "contrast_ignored_backlog": true,
+    "contrast_50_new": true,
+    "contrast_state_50": true,
+    "main_checkpoint_exists": true,
+    "contrast_checkpoint_exists": true,
+    "duplicate_first_100": true,
+    "duplicate_first_unique_100": true,
+    "duplicate_final_200": true,
+    "duplicate_final_unique_100": true,
+    "duplicate_checkpoint_exists": true,
+    "main_no_exception": true
+  }
+}

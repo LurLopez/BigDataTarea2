@@ -1,0 +1,11 @@
+{
+  "label": "first_run",
+  "terminated": true,
+  "exception": null,
+  "batches": 1,
+  "total_rows": 10000,
+  "first_start_offset": "None",
+  "last_end_offset": "{\"flights.events\":{\"0\":3321,\"1\":3406,\"2\":3273}}",
+  "valid_rows": 10000,
+  "invalid_rows": 0
+}

@@ -1,0 +1,53 @@
+{
+  "topic": "flights.events",
+  "checkpoint": "/content/tarea2_bigdata/checkpoints/4.4_queries/watermark_test",
+  "starting_offsets": "latest",
+  "watermark": "3 hours",
+  "window": "6 hours",
+  "slide": "1 hour",
+  "events": [
+    {
+      "key": "2030-01-01|ZZ|9000|ATL|400",
+      "event_time": "2030-01-01 04:00:00",
+      "run_id": "watermark-clock",
+      "test_injected_late": true
+    },
+    {
+      "key": "2030-01-01|ZZ|9001|ATL|200",
+      "event_time": "2030-01-01 02:00:00",
+      "run_id": "watermark-late-ok",
+      "test_injected_late": true
+    },
+    {
+      "key": "2030-01-01|ZZ|9002|ATL|900",
+      "event_time": "2030-01-01 09:00:00",
+      "run_id": "watermark-clock",
+      "test_injected_late": true
+    },
+    {
+      "key": "2030-01-01|ZZ|9003|ATL|330",
+      "event_time": "2030-01-01 03:30:00",
+      "run_id": "watermark-late-drop",
+      "test_injected_late": true
+    }
+  ],
+  "delivered": 4,
+  "failed": 0,
+  "output_rows": 6,
+  "labels": [
+    "CLOCK",
+    "LATE_OK"
+  ],
+  "late_ok_present": true,
+  "late_drop_present": false,
+  "progress": {
+    "batches": 7,
+    "input_rows": 4,
+    "status": {
+      "message": "Waiting for next trigger",
+      "isDataAvailable": false,
+      "isTriggerActive": false
+    },
+    "exception": null
+  }
+}

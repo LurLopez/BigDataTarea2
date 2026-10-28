@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+.env
+.DS_Store
+kaggle.json
+*.tmp
+*.zip
+*.tar.gz
+*.tgz
+kafka-data/
+checkpoints/
+/content/
+data_clean/

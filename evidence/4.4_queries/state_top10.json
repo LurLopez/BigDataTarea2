@@ -1,0 +1,92 @@
+[
+  {
+    "origin_state": "South Carolina",
+    "flights": 104,
+    "avg_dep_delay": 22.846,
+    "stddev_dep_delay": 181.66,
+    "max_dep_delay": 1802.0,
+    "rank": 1,
+    "batch_id": 0
+  },
+  {
+    "origin_state": "Virginia",
+    "flights": 340,
+    "avg_dep_delay": 8.029,
+    "stddev_dep_delay": 51.057,
+    "max_dep_delay": 563.0,
+    "rank": 2,
+    "batch_id": 0
+  },
+  {
+    "origin_state": "Oregon",
+    "flights": 132,
+    "avg_dep_delay": 7.091,
+    "stddev_dep_delay": 68.805,
+    "max_dep_delay": 743.0,
+    "rank": 3,
+    "batch_id": 0
+  },
+  {
+    "origin_state": "Tennessee",
+    "flights": 221,
+    "avg_dep_delay": 6.064,
+    "stddev_dep_delay": 61.528,
+    "max_dep_delay": 755.0,
+    "rank": 4,
+    "batch_id": 0
+  },
+  {
+    "origin_state": "Maryland",
+    "flights": 124,
+    "avg_dep_delay": 5.669,
+    "stddev_dep_delay": 15.085,
+    "max_dep_delay": 97.0,
+    "rank": 5,
+    "batch_id": 0
+  },
+  {
+    "origin_state": "Florida",
+    "flights": 753,
+    "avg_dep_delay": 5.416,
+    "stddev_dep_delay": 38.945,
+    "max_dep_delay": 637.0,
+    "rank": 6,
+    "batch_id": 0
+  },
+  {
+    "origin_state": "Texas",
+    "flights": 962,
+    "avg_dep_delay": 5.2,
+    "stddev_dep_delay": 53.248,
+    "max_dep_delay": 1263.0,
+    "rank": 7,
+    "batch_id": 0
+  },
+  {
+    "origin_state": "New York",
+    "flights": 508,
+    "avg_dep_delay": 5.059,
+    "stddev_dep_delay": 42.782,
+    "max_dep_delay": 510.0,
+    "rank": 8,
+    "batch_id": 0
+  },
+  {
+    "origin_state": "Washington",
+    "flights": 323,
+    "avg_dep_delay": 4.619,
+    "stddev_dep_delay": 36.63,
+    "max_dep_delay": 440.0,
+    "rank": 9,
+    "batch_id": 0
+  },
+  {
+    "origin_state": "Kentucky",
+    "flights": 121,
+    "avg_dep_delay": 4.339,
+    "stddev_dep_delay": 45.412,
+    "max_dep_delay": 443.0,
+    "rank": 10,
+    "batch_id": 0
+  }
+]

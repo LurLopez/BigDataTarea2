@@ -1,0 +1,17 @@
+{
+  "generated_at": "2026-10-27T20:15:21+00:00",
+  "repo_commit": "a89ba5df6cec9d0264aaa0cf6afb354ce92d487f",
+  "spark_version": "4.0.1",
+  "java_version": "21.0.12.1",
+  "python": "3.13.18",
+  "topic": "flights.events",
+  "bootstrap_servers": "localhost:9092",
+  "checkpoint": "/content/tarea2_bigdata/checkpoints/4.3_ingest",
+  "trigger": "availableNow",
+  "starting_offsets": "earliest",
+  "schema_version": 1,
+  "first_rows": 10000,
+  "restart_rows": 5,
+  "valid_rows": 10005,
+  "invalid_rows": 0
+}

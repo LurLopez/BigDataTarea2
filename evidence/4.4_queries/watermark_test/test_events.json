@@ -1,0 +1,26 @@
+[
+  {
+    "key": "2030-01-01|ZZ|9000|ATL|400",
+    "event_time": "2030-01-01 04:00:00",
+    "run_id": "watermark-clock",
+    "test_injected_late": true
+  },
+  {
+    "key": "2030-01-01|ZZ|9001|ATL|200",
+    "event_time": "2030-01-01 02:00:00",
+    "run_id": "watermark-late-ok",
+    "test_injected_late": true
+  },
+  {
+    "key": "2030-01-01|ZZ|9002|ATL|900",
+    "event_time": "2030-01-01 09:00:00",
+    "run_id": "watermark-clock",
+    "test_injected_late": true
+  },
+  {
+    "key": "2030-01-01|ZZ|9003|ATL|330",
+    "event_time": "2030-01-01 03:30:00",
+    "run_id": "watermark-late-drop",
+    "test_injected_late": true
+  }
+]

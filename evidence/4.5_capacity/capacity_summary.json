@@ -1,0 +1,83 @@
+{
+  "generated_at": "2026-10-27T21:27:33+00:00",
+  "repo_commit": "2cbe66317f9096bf9d70201526e2d56a6b816bc2",
+  "spark_version": "4.0.1",
+  "python": "3.13.18",
+  "topic": "flights.events",
+  "bootstrap_servers": "localhost:9092",
+  "config": {
+    "rates": [
+      50,
+      250,
+      500
+    ],
+    "scenario_seconds": 60,
+    "cooldown_seconds": 30,
+    "start_row": 10005,
+    "trigger": "5 seconds",
+    "window": "6 hours",
+    "slide": "1 hour",
+    "watermark": "3 hours",
+    "query": "Consulta 3: ventanas por aeropuerto",
+    "starting_offsets": "latest"
+  },
+  "scenarios": [
+    {
+      "rate": 50,
+      "target_rate": 50,
+      "delivered": 2867,
+      "delivered_rate": 47.77,
+      "attempted": 2867,
+      "processed": 2867,
+      "max_input_rate": 48.60972194438888,
+      "max_processed_rate": 222.117202268431,
+      "max_batch_duration_ms": 2784,
+      "max_lag": 378,
+      "final_lag": 0,
+      "producer_failed": 0,
+      "query_exception": null
+    },
+    {
+      "rate": 250,
+      "target_rate": 250,
+      "delivered": 12213,
+      "delivered_rate": 203.539,
+      "attempted": 12213,
+      "processed": 12213,
+      "max_input_rate": 222.75544891021795,
+      "max_processed_rate": 802.3529411764706,
+      "max_batch_duration_ms": 4518,
+      "max_lag": 1935,
+      "final_lag": 0,
+      "producer_failed": 0,
+      "query_exception": null
+    },
+    {
+      "rate": 500,
+      "target_rate": 500,
+      "delivered": 21336,
+      "delivered_rate": 355.57,
+      "attempted": 21336,
+      "processed": 21336,
+      "max_input_rate": 421.4,
+      "max_processed_rate": 2107.1428571428573,
+      "max_batch_duration_ms": 5239,
+      "max_lag": 3361,
+      "final_lag": 0,
+      "producer_failed": 0,
+      "query_exception": null
+    }
+  ],
+  "plot_error": null,
+  "checks": {
+    "three_scenarios": true,
+    "all_producers_delivered": true,
+    "all_producers_no_failed": true,
+    "all_producers_status_ok": true,
+    "all_scenarios_have_samples": true,
+    "all_checkpoints": true,
+    "all_csv": true,
+    "plot_created": true,
+    "no_query_exception": true
+  }
+}

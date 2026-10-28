@@ -1,0 +1,19 @@
+{
+  "initial_200": true,
+  "state_initial_200": true,
+  "restart_no_backlog_zero": true,
+  "backlog_300": true,
+  "state_after_backlog_500": true,
+  "no_reprocess": true,
+  "contrast_ignored_backlog": true,
+  "contrast_50_new": true,
+  "contrast_state_50": true,
+  "main_checkpoint_exists": true,
+  "contrast_checkpoint_exists": true,
+  "duplicate_first_100": true,
+  "duplicate_first_unique_100": true,
+  "duplicate_final_200": true,
+  "duplicate_final_unique_100": true,
+  "duplicate_checkpoint_exists": true,
+  "main_no_exception": true
+}

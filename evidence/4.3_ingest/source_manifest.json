@@ -1,0 +1,80 @@
+{
+  "dataset": "US Flight Data 2024 (Tarea 1)",
+  "source": "data_clean/fact_flights/month=9 + data_clean/dim_airports",
+  "selection": {
+    "month": 9,
+    "fl_date_min": "2024-09-01T00:00:00",
+    "fl_date_max": "2024-09-30T00:00:00",
+    "rows": 582622,
+    "columns": [
+      "fl_date",
+      "op_unique_carrier",
+      "op_carrier_fl_num",
+      "origin",
+      "dest",
+      "crs_dep_time",
+      "dep_time",
+      "dep_delay",
+      "arr_delay",
+      "cancelled",
+      "diverted",
+      "distance"
+    ],
+    "sort": [
+      "fl_date",
+      "crs_dep_time"
+    ]
+  },
+  "event_time": "fl_date + crs_dep_time (salida programada, hora local)",
+  "generated_at": "2026-10-27T18:11:57+00:00",
+  "files": {
+    "fact_flights_sep_sorted.parquet": {
+      "bytes": 5826932,
+      "sha256": "09e5db6ce57dabc627462d4cf29bef272daff0b4aa321231913e6471cd2f9de4",
+      "rows": 582622,
+      "columns": [
+        "fl_date",
+        "op_unique_carrier",
+        "op_carrier_fl_num",
+        "origin",
+        "dest",
+        "crs_dep_time",
+        "dep_time",
+        "dep_delay",
+        "arr_delay",
+        "cancelled",
+        "diverted",
+        "distance"
+      ],
+      "null_counts": {
+        "fl_date": 0,
+        "op_unique_carrier": 0,
+        "op_carrier_fl_num": 0,
+        "origin": 0,
+        "dest": 0,
+        "crs_dep_time": 0,
+        "dep_time": 3418,
+        "dep_delay": 3421,
+        "arr_delay": 4360,
+        "cancelled": 0,
+        "diverted": 0,
+        "distance": 0
+      }
+    },
+    "dim_airports.parquet": {
+      "bytes": 10097,
+      "sha256": "51d2f261d985d664d098e011b818324f1ecf6f4b75683cc7d3796eaaa4d6082e",
+      "rows": 348,
+      "columns": [
+        "airport_code",
+        "city_name",
+        "state_name"
+      ],
+      "null_counts": {
+        "airport_code": 0,
+        "city_name": 0,
+        "state_name": 0
+      }
+    }
+  }
+}

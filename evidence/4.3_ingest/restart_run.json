@@ -1,0 +1,11 @@
+{
+  "label": "restart_run",
+  "terminated": true,
+  "exception": null,
+  "batches": 1,
+  "total_rows": 5,
+  "first_start_offset": "{\"flights.events\":{\"0\":3321,\"1\":3406,\"2\":3273}}",
+  "last_end_offset": "{\"flights.events\":{\"0\":3323,\"1\":3407,\"2\":3275}}",
+  "valid_rows": 5,
+  "invalid_rows": 0
+}

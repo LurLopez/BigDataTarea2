@@ -1,0 +1,25 @@
+{
+  "run_id": "tarea2-43-restart-57e393f9",
+  "events": [
+    {
+      "key": "2024-09-01|AA|2544|TYS|1428",
+      "event_sequence": 10000
+    },
+    {
+      "key": "2024-09-01|AA|981|GRR|1428",
+      "event_sequence": 10001
+    },
+    {
+      "key": "2024-09-01|DL|3115|ATL|1428",
+      "event_sequence": 10002
+    },
+    {
+      "key": "2024-09-01|DL|716|LGA|1428",
+      "event_sequence": 10003
+    },
+    {
+      "key": "2024-09-01|MQ|3727|CMH|1428",
+      "event_sequence": 10004
+    }
+  ]
+}

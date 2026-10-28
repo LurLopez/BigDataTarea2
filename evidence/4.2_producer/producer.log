@@ -1,0 +1,16 @@
+$ /usr/bin/python3 /content/BigDataTarea2/producer.py --input /content/BigDataTarea2/data/fact_flights_sep_sorted.parquet --dimension-path /content/BigDataTarea2/data/dim_airports.parquet --bootstrap-servers localhost:9092 --topic flights.events --rate 500 --max-events 10000 --max-attempts 5 --summary-path /content/tarea2_bigdata/outputs/4.2_producer/producer_summary.json --run-id tarea2-42-20261027T190232Z-b6aff9
+
+STDOUT:
+Fuente: /content/BigDataTarea2/data/fact_flights_sep_sorted.parquet
+Tópico: flights.events | broker(s): localhost:9092
+Tasa objetivo: 500 eventos/s | run_id: tarea2-42-20261027T190232Z-b6aff9
+Reintentos configurados: 5 intentos totales (1 envío + 4 reintentos)
+Límite de esta ejecución: 10,000 eventos
+Enviados al productor: 10,000
+Resumen escrito en: /content/tarea2_bigdata/outputs/4.2_producer/producer_summary.json
+PRODUCER_SUMMARY={"status": "ok", "run_id": "tarea2-42-20261027T190232Z-b6aff9", "topic": "flights.events", "source": "/content/BigDataTarea2/data/fact_flights_sep_sorted.parquet", "target_rate_events_per_second": 500.0, "pacing_mode": "strict", "max_attempts": 5, "event_time": "scheduled_departure_local", "attempted": 10000, "delivered": 10000, "failed": 0, "pending_after_flush": 0, "failed_event_id": null, "last_error": null, "elapsed_seconds": 26.218, "delivered_events_per_second": 381.421}
+
+
+STDERR:
+%4|1793127753.232|GETPID|tarea2-producer-tarea2-4#producer-1| [thrd:main]: Failed to acquire idempotence PID from broker localhost:9092/1: Broker: Coordinator load in progress: retrying
+

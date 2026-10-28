@@ -1,0 +1,18 @@
+{
+  "status": "ok",
+  "run_id": "tarea2-42-20261027T190232Z-b6aff9",
+  "topic": "flights.events",
+  "source": "/content/BigDataTarea2/data/fact_flights_sep_sorted.parquet",
+  "target_rate_events_per_second": 500.0,
+  "pacing_mode": "strict",
+  "max_attempts": 5,
+  "event_time": "scheduled_departure_local",
+  "attempted": 10000,
+  "delivered": 10000,
+  "failed": 0,
+  "pending_after_flush": 0,
+  "failed_event_id": null,
+  "last_error": null,
+  "elapsed_seconds": 26.218,
+  "delivered_events_per_second": 381.421
+}

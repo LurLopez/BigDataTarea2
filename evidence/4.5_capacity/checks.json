@@ -1,0 +1,11 @@
+{
+  "three_scenarios": true,
+  "all_producers_delivered": true,
+  "all_producers_no_failed": true,
+  "all_producers_status_ok": true,
+  "all_scenarios_have_samples": true,
+  "all_checkpoints": true,
+  "all_csv": true,
+  "plot_created": true,
+  "no_query_exception": true
+}
